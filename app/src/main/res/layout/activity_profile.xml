@@ -5,6 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".profileActivity">
+
+    <ImageView
+        android:id="@+id/profileProfileIcon"
+        style="@style/roundedImageViewRounded"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="109dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
