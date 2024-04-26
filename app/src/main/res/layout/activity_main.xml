@@ -8,19 +8,27 @@
     android:background="#000000"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="189dp" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="172dp" />
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="329dp" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="183dp"
-        tools:layout_editor_absoluteY="66dp"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="375dp"
         tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
