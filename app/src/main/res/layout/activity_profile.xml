@@ -10,7 +10,6 @@
 
     <ImageView
         android:id="@+id/profileProfileIcon"
-        style="@style/roundedImageViewRounded"
         android:layout_width="80dp"
         android:layout_height="80dp"
         tools:layout_editor_absoluteX="165dp"
