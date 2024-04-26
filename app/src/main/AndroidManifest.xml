@@ -13,6 +13,10 @@
         android:theme="@style/Theme.Skoob"
         tools:targetApi="31">
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Skoob" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
