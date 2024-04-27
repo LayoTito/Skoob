@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wallpaper2"
+    android:background="@drawable/wallpaperblur"
     tools:context=".MainActivity">
 
     <Button
@@ -27,8 +27,8 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="219dp"
-        tools:layout_editor_absoluteY="354dp" />
+        tools:layout_editor_absoluteX="187dp"
+        tools:layout_editor_absoluteY="353dp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -57,5 +57,5 @@
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         tools:layout_editor_absoluteX="-14dp"
-        tools:layout_editor_absoluteY="248dp" />
+        tools:layout_editor_absoluteY="477dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
