@@ -49,13 +49,13 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="439dp"
-        android:layout_height="36dp"
+        android:layout_width="404dp"
+        android:layout_height="35dp"
         android:fontFamily="serif"
         android:text="Conheça obras. Revisite momentos."
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="-14dp"
-        tools:layout_editor_absoluteY="477dp" />
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="476dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
