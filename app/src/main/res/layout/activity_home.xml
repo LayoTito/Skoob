@@ -5,6 +5,45 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".homeActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="-2dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skoob"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="661dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="69dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        tools:layout_editor_absoluteX="340dp"
+        tools:layout_editor_absoluteY="-1dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
