@@ -16,6 +16,7 @@
         tools:layout_editor_absoluteY="-1dp"
         tools:srcCompat="@tools:sample/avatars" />
 
+<<<<<<< HEAD
     <ImageView
         android:id="@+id/profileLine"
         android:layout_width="411dp"
@@ -91,6 +92,15 @@
         android:textColor="#FFFFFF"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="548dp" />
+=======
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="242dp" />
+>>>>>>> 24eacca8d400e544b0362d3a9b3054da048fc58c
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
