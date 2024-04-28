@@ -1,6 +1,7 @@
 package com.example.skoob
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
 import android.widget.Toast
@@ -16,7 +17,11 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var bridgeEmail: TextView
     private lateinit var bridgeUsername: TextView
     private lateinit var bridgePassword: TextView
+    private lateinit var bridgeLogin: TextView
     private lateinit var bridgePolitics: CheckBox
+    private lateinit var bridgeCreateAccont: Button
+    private lateinit var bridgeCancel: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -30,29 +35,36 @@ class SignupActivity : AppCompatActivity() {
         bridgeEmail = findViewById(R.id.signupTextEmail)
         bridgeUsername = findViewById(R.id.signupTextUsername)
         bridgePassword = findViewById(R.id.signupTextPassword)
+        bridgeLogin = findViewById(R.id.signupTextLogin)
         bridgePolitics = findViewById(R.id.signupCheckBoxPolitics)
+        bridgeCreateAccont = findViewById(R.id.signupButtonCreateAccont)
+        bridgeCancel = findViewById(R.id.signupButtonCancel)
 
-    }
+        bridgeCreateAccont.setOnClickListener {
 
-    fun clickCreateAccont() {
+            if (bridgePolitics.isChecked){
 
-        if (bridgePolitics.isChecked){
+                getAccontData()
+                toLoginScreen()
 
-            toLoginScreen()
-            getAccontData()
+            } else {
 
-        } else {
+                Toast.makeText(this, "Para a criação de contas, é necessario aceitar os termos de uso", Toast.LENGTH_LONG).show()
 
-            Toast.makeText(this, "Para a criação de contas, é necessario aceitar os termos de uso", Toast.LENGTH_LONG).show()
+            }
+        }
+
+        bridgeCancel.setOnClickListener {
+
+            toWelcomeScreen()
 
         }
 
-    }
+        bridgeLogin.setOnClickListener {
 
-    fun clickCancel() {
+            toLoginScreen()
 
-        toWelcomeScreen()
-
+        }
     }
 
     fun getAccontData() {
@@ -60,6 +72,4 @@ class SignupActivity : AppCompatActivity() {
 
 
     }
-
-
 }
