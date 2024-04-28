@@ -52,11 +52,14 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="577dp" />
+        android:layout_width="149dp"
+        android:layout_height="45dp"
+        android:fontFamily="serif"
+        android:text="Comentários"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="560dp" />
 
     <TextView
         android:id="@+id/textView10"
