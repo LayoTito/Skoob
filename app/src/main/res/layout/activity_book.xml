@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B1919"
+    tools:context=".activity_book">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="208dp"
+        android:layout_height="258dp"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="28dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="361dp"
+        android:layout_height="52dp"
+        android:fontFamily="serif"
+        android:text="Título do Livro"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="145dp"
+        android:layout_height="44dp"
+        android:fontFamily="serif"
+        android:text="Reviews"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="326dp"
+        android:layout_height="103dp"
+        android:fontFamily="serif"
+        android:text="As Reviews"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="437dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="577dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="347dp"
+        android:layout_height="80dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="633dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/maiss"
+        tools:layout_editor_absoluteX="296dp"
+        tools:layout_editor_absoluteY="633dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
