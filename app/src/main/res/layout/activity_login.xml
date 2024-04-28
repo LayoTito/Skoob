@@ -34,39 +34,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/signupIconApp" />
 
-    <Button
-        android:id="@+id/signupButtonCancel"
-        android:layout_width="150dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="40dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="CANCELAR"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textColorLink="#5A2B2B"
-        app:cornerRadius="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/signupButtonCreateAccont"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/signupButtonCreateAccont" />
-
     <TextView
-        android:id="@+id/signupTextTextLogin"
-        android:layout_width="328dp"
+        android:id="@+id/loginTextTextLogin"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="40dp"
-        android:text="Já possuí uma conta? Faça seu LOGIN."
+        android:text="Já possuí uma conta? Faça seu "
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupButtonCreateAccont" />
+        app:layout_constraintTop_toBottomOf="@+id/loginButtonLogin" />
 
     <CheckBox
-        android:id="@+id/signupCheckBoxPolitics"
+        android:id="@+id/loginCheckBoxPolitics"
         android:layout_width="0dp"
         android:layout_height="67dp"
         android:layout_marginStart="40dp"
@@ -81,7 +63,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/signupTextUsername"
+        android:id="@+id/loginTextUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -89,7 +71,7 @@
         android:layout_marginEnd="40dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:text="Name/Email"
         android:textColor="#919191"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -97,7 +79,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/signupTextPassword"
+        android:id="@+id/loginTextPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -110,23 +92,52 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupTextUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/loginTextUsername" />
 
     <Button
-        android:id="@+id/signupButtonCreateAccont"
+        android:id="@+id/loginButtonLogin"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#00FFFFFF"
-        android:text="CRIAR CONTA"
+        android:text="LOG IN"
         app:cornerRadius="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/signupButtonCancel"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupCheckBoxPolitics"
+        app:layout_constraintTop_toBottomOf="@+id/loginCheckBoxPolitics"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/loginButtonCancel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="CANCELAR"
+        android:textColor="#000000"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/loginButtonLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/loginButtonLogin"
+        app:layout_constraintTop_toTopOf="@+id/loginButtonLogin"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/loginTextLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:text="LOGIN"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/loginTextTextLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/loginTextTextLogin"
+        app:layout_constraintTop_toTopOf="@+id/loginTextTextLogin"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

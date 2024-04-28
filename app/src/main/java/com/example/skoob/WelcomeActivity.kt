@@ -11,8 +11,8 @@ import com.example.skoob.objects.toSignupScreen
 
 class WelcomeActivity : AppCompatActivity() {
 
-    private lateinit var bridgeSignup: Button
-    private lateinit var bridgeLogin: Button
+    private lateinit var bridgeWelcomeSignup: Button
+    private lateinit var bridgeWelcomeLogin: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -23,16 +23,16 @@ class WelcomeActivity : AppCompatActivity() {
             insets
         }
 
-        bridgeSignup = findViewById(R.id.welcomeButtonSignUp)
-        bridgeLogin = findViewById(R.id.welcomeButtonLogIn)
+        bridgeWelcomeSignup = findViewById(R.id.welcomeButtonSignUp)
+        bridgeWelcomeLogin = findViewById(R.id.welcomeButtonLogIn)
 
-        bridgeSignup.setOnClickListener(){
+        bridgeWelcomeSignup.setOnClickListener(){
 
             toSignupScreen()
 
         }
 
-        bridgeLogin.setOnClickListener() {
+        bridgeWelcomeLogin.setOnClickListener() {
 
             toLoginScreen()
 
