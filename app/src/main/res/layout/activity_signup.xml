@@ -46,25 +46,12 @@
         android:textColor="#000000"
         android:textColorLink="#5A2B2B"
         app:cornerRadius="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/loginButtonLogin"
+        app:layout_constraintBottom_toBottomOf="@+id/signupButtonCreateAccount"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/loginButtonLogin" />
-
-    <TextView
-        android:id="@+id/loginTextTextLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="48dp"
-        android:text="Já possuí uma conta? Faça seu "
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButtonLogin" />
+        app:layout_constraintTop_toTopOf="@+id/signupButtonCreateAccount" />
 
     <CheckBox
-        android:id="@+id/loginCheckBoxPolitics"
+        android:id="@+id/signupCheckBoxPolitics"
         android:layout_width="0dp"
         android:layout_height="67dp"
         android:layout_marginStart="40dp"
@@ -86,48 +73,51 @@
         android:layout_marginTop="260dp"
         android:layout_marginEnd="40dp"
         android:ems="10"
+        android:hint="Email"
         android:inputType="text"
-        android:text="Email"
-        android:textColor="#919191"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#919191"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/loginTextUsername"
+        android:id="@+id/signupTextUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="40dp"
         android:ems="10"
+        android:hint="Name"
         android:inputType="text"
-        android:text="Name"
-        android:textColor="#919191"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#919191"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signupTextEmail" />
 
     <EditText
-        android:id="@+id/loginTextPassword"
+        android:id="@+id/signupTextPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="40dp"
         android:ems="10"
+        android:hint="Senha"
         android:inputType="text"
-        android:text="Senha"
-        android:textColor="#919191"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#919191"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginTextUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/signupTextUsername" />
 
     <Button
-        android:id="@+id/loginButtonLogin"
+        android:id="@+id/signupButtonCreateAccount"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -139,24 +129,36 @@
         app:layout_constraintEnd_toStartOf="@+id/signupButtonCancel"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginCheckBoxPolitics"
+        app:layout_constraintTop_toBottomOf="@+id/signupCheckBoxPolitics"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
+
+    <TextView
+        android:id="@+id/signupTextAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:text=" Já tem uma conta? "
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupButtonCreateAccount" />
 
     <TextView
         android:id="@+id/signupTextLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="60dp"
-        android:text="LOGIN"
-        android:textColor="#FFFFFF"
+        android:text="Faça o seu login"
+        android:textColor="#FBFBFB"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/loginTextTextLogin"
+        app:layout_constraintBottom_toBottomOf="@+id/signupTextAccount"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintStart_toEndOf="@+id/loginTextTextLogin"
-        app:layout_constraintTop_toTopOf="@+id/loginTextTextLogin"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/signupTextAccount"
+        app:layout_constraintTop_toTopOf="@+id/signupTextAccount"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

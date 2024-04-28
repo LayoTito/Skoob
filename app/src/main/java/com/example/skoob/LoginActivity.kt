@@ -2,21 +2,22 @@ package com.example.skoob
 
 import android.os.Bundle
 import android.widget.Button
-import android.widget.CheckBox
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.skoob.objects.toHomeScreen
+import com.example.skoob.objects.toSignupScreen
+import com.example.skoob.objects.toWelcomeScreen
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var bridgeSignupUsername: TextView
-    private lateinit var bridgeSignupPassword: TextView
-    private lateinit var bridgeSignupLogin: TextView
-    private lateinit var bridgeSignupPolitics: CheckBox
-    private lateinit var bridgeSignupLogin: Button
-    private lateinit var bridgeSignupCancel: Button
+    private lateinit var bridgeLoginUsername: TextView
+    private lateinit var bridgeLoginPassword: TextView
+    private lateinit var bridgeLoginTextSignup: TextView
+    private lateinit var bridgeLoginLogin: Button
+    private lateinit var bridgeLoginCancel: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,12 +29,35 @@ class LoginActivity : AppCompatActivity() {
             insets
         }
 
-        bridgeSignupUsername = findViewById(R.id.loginTextUsername)
-        bridgeSignupPassword = findViewById(R.id.loginTextPassword)
-        bridgeSignupLogin = findViewById(R.id.signupTextLogin)
-        bridgeSignupPolitics = findViewById(R.id.loginCheckBoxPolitics)
-        bridgeSignupLogin = findViewById(R.id.loginButtonLogin)
-        bridgeSignupCancel = findViewById(R.id.signupButtonCancel)
+        bridgeLoginUsername = findViewById(R.id.loginTextUsername)
+        bridgeLoginPassword = findViewById(R.id.loginTextPassword)
+        bridgeLoginTextSignup = findViewById(R.id.loginTextSignup)
+        bridgeLoginLogin = findViewById(R.id.loginButtonLogin)
+        bridgeLoginCancel = findViewById(R.id.loginButtonCancel)
+
+        bridgeLoginLogin.setOnClickListener {
+
+            getData()
+            toHomeScreen()
+
+        }
+
+        bridgeLoginCancel.setOnClickListener {
+
+            toWelcomeScreen()
+
+        }
+
+        bridgeLoginTextSignup.setOnClickListener {
+
+            toSignupScreen()
+
+        }
 
     }
+
+    fun getData() {
+
+    }
+
 }
