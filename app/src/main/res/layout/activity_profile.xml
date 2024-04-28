@@ -53,7 +53,7 @@
         tools:layout_editor_absoluteY="225dp" />
 
     <TextView
-        android:id="@+id/signupTextLogin"
+        android:id="@+id/signupTextTextLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Top 3"
