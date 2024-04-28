@@ -9,19 +9,19 @@
     tools:context=".activity_signup">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/signupIconApp"
         android:layout_width="101dp"
         android:layout_height="103dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="96dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/signupTextApp"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/signupTextApp"
         android:layout_width="116dp"
         android:layout_height="47dp"
         android:layout_marginEnd="120dp"
@@ -30,27 +30,28 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/signupIconApp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="@+id/signupIconApp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/signupButtonCancel"
         android:layout_width="150dp"
         android:layout_height="45dp"
         android:layout_marginEnd="40dp"
         android:backgroundTint="#FFFFFF"
+        android:onClick="clickCancel"
         android:text="CANCELAR"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textColorLink="#5A2B2B"
         app:cornerRadius="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/signupButtonCreateAccont"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button" />
+        app:layout_constraintTop_toTopOf="@+id/signupButtonCreateAccont" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/signupTextLogin"
         android:layout_width="328dp"
         android:layout_height="0dp"
         android:layout_marginStart="40dp"
@@ -63,10 +64,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/signupButtonCreateAccont" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/signupCheckBoxPolitics"
         android:layout_width="0dp"
         android:layout_height="67dp"
         android:layout_marginStart="40dp"
@@ -81,7 +82,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/signupTextEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -97,7 +98,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/signupTextUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -110,10 +111,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/signupTextEmail" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/signupTextPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -126,21 +127,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/signupTextUsername" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signupButtonCreateAccont"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#00FFFFFF"
+        android:onClick="clickCreateAccont"
         android:text="CRIAR CONTA"
         app:cornerRadius="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/signupButtonCancel"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/signupCheckBoxPolitics"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
 

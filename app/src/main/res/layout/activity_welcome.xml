@@ -16,6 +16,7 @@
         android:layout_marginTop="572dp"
         android:layout_marginEnd="40dp"
         android:backgroundTint="#00FFFFFF"
+        android:onClick="clickSignup"
         android:text="SIGN UP"
         android:textColorLink="#000000"
         app:cornerRadius="5dp"
@@ -35,18 +36,20 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/welcomeIconProfile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toEndOf="@+id/welcomeIconProfile"
-        tools:layout_editor_absoluteY="407dp" />
+        app:layout_constraintTop_toTopOf="@+id/welcomeIconProfile" />
 
     <ImageView
         android:id="@+id/welcomeIconProfile"
         android:layout_width="122dp"
         android:layout_height="104dp"
-        android:layout_marginTop="376dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="364dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
@@ -59,6 +62,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="40dp"
         android:backgroundTint="#FFFFFF"
+        android:onClick="clickLogin"
         android:text="LOG IN"
         android:textColor="#000000"
         app:cornerRadius="5dp"

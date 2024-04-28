@@ -1,15 +1,18 @@
 package com.example.skoob
 
-import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.skoob.objects.toLoginScreen
+import com.example.skoob.objects.toSignupScreen
 
 class WelcomeActivity : AppCompatActivity() {
 
-
+    private lateinit var buttonSignup: Button
+    private lateinit var buttonLogin: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,19 +22,29 @@ class WelcomeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        buttonSignup = findViewById(R.id.welcomeButtonSignUp)
+        buttonLogin = findViewById(R.id.welcomeButtonLogIn)
+
+        buttonSignup.setOnClickListener(){
+
+
+
+        }
+
     }
 
-    fun toSignUpScreen() {
 
-        val intentSignUp = Intent(this, SignupActivity::class.java)
-        startActivity(intentSignUp)
+    fun clickSignup() {
+
+        toSignupScreen()
 
     }
 
-    fun toLogInScreen() {
+    fun clickLogin() {
 
-        val intentLogIn = Intent(this, LoginActivity::class.java)
-        startActivity(intentLogIn)
+        toLoginScreen()
+
     }
 
 }
