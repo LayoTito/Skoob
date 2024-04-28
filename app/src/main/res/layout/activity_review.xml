@@ -18,10 +18,10 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="143dp"
-        android:layout_height="182dp"
-        tools:layout_editor_absoluteX="243dp"
-        tools:layout_editor_absoluteY="86dp"
+        android:layout_width="134dp"
+        android:layout_height="165dp"
+        tools:layout_editor_absoluteX="250dp"
+        tools:layout_editor_absoluteY="89dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -37,44 +37,44 @@
         tools:layout_editor_absoluteY="6dp" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="61dp"
-        android:layout_height="61dp"
-        android:background="@drawable/estrela"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="297dp" />
-
-    <ImageButton
         android:id="@+id/imageButton5"
         android:layout_width="61dp"
         android:layout_height="61dp"
         android:background="@drawable/estrela"
-        tools:layout_editor_absoluteX="334dp"
-        tools:layout_editor_absoluteY="297dp" />
+        tools:layout_editor_absoluteX="329dp"
+        tools:layout_editor_absoluteY="286dp" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/imageButton3"
         android:layout_width="61dp"
         android:layout_height="61dp"
         android:background="@drawable/estrela"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="297dp" />
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="286dp" />
 
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="61dp"
         android:layout_height="61dp"
         android:background="@drawable/estrela"
-        tools:layout_editor_absoluteX="252dp"
-        tools:layout_editor_absoluteY="297dp" />
+        tools:layout_editor_absoluteX="247dp"
+        tools:layout_editor_absoluteY="286dp" />
 
     <ImageButton
         android:id="@+id/imageButton4"
         android:layout_width="61dp"
         android:layout_height="61dp"
         android:background="@drawable/estrela"
-        tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="297dp" />
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="286dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:background="@drawable/estrela"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="286dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -84,30 +84,42 @@
         android:text="Nome do Livro"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="139dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="374dp"
-        android:layout_height="54dp"
-        android:fontFamily="serif"
-        android:text="Comentários"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="379dp" />
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="155dp" />
 
     <EditText
         android:id="@+id/editTextText2"
-        android:layout_width="370dp"
-        android:layout_height="118dp"
+        android:layout_width="378dp"
+        android:layout_height="185dp"
         android:ems="10"
+        android:fontFamily="serif"
         android:inputType="text"
-        android:text="Name"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="454dp" />
+        android:text="Escreva sua review..."
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="388dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/Like"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="611dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="283dp"
+        android:layout_height="73dp"
+        android:fontFamily="serif"
+        android:text="Deixar minha review pública."
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="608dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
