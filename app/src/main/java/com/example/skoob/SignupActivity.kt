@@ -33,11 +33,11 @@ class SignupActivity : AppCompatActivity() {
         }
 
         bridgeSignupEmail = findViewById(R.id.signupTextEmail)
-        bridgeSignupUsername = findViewById(R.id.sigTextUsername)
-        bridgeSignupPassword = findViewById(R.id.loginTextPassword)
+        bridgeSignupUsername = findViewById(R.id.signupTextEmail)
+        bridgeSignupPassword = findViewById(R.id.signupTextPassword)
         bridgeSignupLogin = findViewById(R.id.signupTextLogin)
-        bridgeSignupPolitics = findViewById(R.id.loginCheckBoxPolitics)
-        bridgeSignupCreateAccont = findViewById(R.id.loginButtonLogin)
+        bridgeSignupPolitics = findViewById(R.id.signupCheckBoxPolitics)
+        bridgeSignupCreateAccont = findViewById(R.id.signupButtonCreateAccount)
         bridgeSignupCancel = findViewById(R.id.signupButtonCancel)
 
         bridgeSignupCreateAccont.setOnClickListener {

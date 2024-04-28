@@ -6,33 +6,108 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1B1919"
-    tools:context=".activity_review">
+    tools:context=".ReviewActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:background="@drawable/x"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="7dp" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="213dp"
-        android:layout_height="270dp"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="147dp"
+        android:layout_width="143dp"
+        android:layout_height="182dp"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="86dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="278dp"
-        android:layout_height="86dp"
+        android:layout_width="357dp"
+        android:layout_height="51dp"
         android:fontFamily="serif"
-        android:text="REVIEW"
+        android:text="Review"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="60sp"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="30dp" />
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="6dp" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="450dp" />
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:background="@drawable/estrela"
+        tools:layout_editor_absoluteX="175dp"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:background="@drawable/estrela"
+        tools:layout_editor_absoluteX="334dp"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:background="@drawable/estrela"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:background="@drawable/estrela"
+        tools:layout_editor_absoluteX="252dp"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:background="@drawable/estrela"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="191dp"
+        android:layout_height="92dp"
+        android:fontFamily="serif"
+        android:text="Nome do Livro"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="374dp"
+        android:layout_height="54dp"
+        android:fontFamily="serif"
+        android:text="Comentários"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="379dp" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="370dp"
+        android:layout_height="118dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="454dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
