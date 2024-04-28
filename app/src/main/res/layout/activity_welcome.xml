@@ -26,33 +26,6 @@
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
 
-    <TextView
-        android:id="@+id/welcomeTextProfile"
-        android:layout_width="135dp"
-        android:layout_height="50dp"
-        android:fontFamily="serif"
-        android:text="SKOOB"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/welcomeIconProfile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
-        app:layout_constraintStart_toEndOf="@+id/welcomeIconProfile"
-        app:layout_constraintTop_toTopOf="@+id/welcomeIconProfile" />
-
-    <ImageView
-        android:id="@+id/welcomeIconProfile"
-        android:layout_width="122dp"
-        android:layout_height="104dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="364dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <Button
         android:id="@+id/welcomeButtonLogIn"
         android:layout_width="0dp"
@@ -84,6 +57,17 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="404dp"
+        android:src="@drawable/skoob_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
