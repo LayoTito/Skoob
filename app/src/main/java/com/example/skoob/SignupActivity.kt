@@ -14,13 +14,13 @@ import com.example.skoob.objects.toWelcomeScreen
 
 class SignupActivity : AppCompatActivity() {
 
-    private lateinit var bridgeEmail: TextView
-    private lateinit var bridgeUsername: TextView
-    private lateinit var bridgePassword: TextView
-    private lateinit var bridgeLogin: TextView
-    private lateinit var bridgePolitics: CheckBox
-    private lateinit var bridgeCreateAccont: Button
-    private lateinit var bridgeCancel: Button
+    private lateinit var bridgeSignupEmail: TextView
+    private lateinit var bridgeSignupUsername: TextView
+    private lateinit var bridgeSignupPassword: TextView
+    private lateinit var bridgeSignupLogin: TextView
+    private lateinit var bridgeSignupPolitics: CheckBox
+    private lateinit var bridgeSignupCreateAccont: Button
+    private lateinit var bridgeSignupCancel: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,17 +32,17 @@ class SignupActivity : AppCompatActivity() {
             insets
         }
 
-        bridgeEmail = findViewById(R.id.signupTextEmail)
-        bridgeUsername = findViewById(R.id.signupTextUsername)
-        bridgePassword = findViewById(R.id.signupTextPassword)
-        bridgeLogin = findViewById(R.id.signupTextLogin)
-        bridgePolitics = findViewById(R.id.signupCheckBoxPolitics)
-        bridgeCreateAccont = findViewById(R.id.signupButtonCreateAccont)
-        bridgeCancel = findViewById(R.id.signupButtonCancel)
+        bridgeSignupEmail = findViewById(R.id.signupTextEmail)
+        bridgeSignupUsername = findViewById(R.id.sigTextUsername)
+        bridgeSignupPassword = findViewById(R.id.loginTextPassword)
+        bridgeSignupLogin = findViewById(R.id.signupTextLogin)
+        bridgeSignupPolitics = findViewById(R.id.loginCheckBoxPolitics)
+        bridgeSignupCreateAccont = findViewById(R.id.loginButtonLogin)
+        bridgeSignupCancel = findViewById(R.id.signupButtonCancel)
 
-        bridgeCreateAccont.setOnClickListener {
+        bridgeSignupCreateAccont.setOnClickListener {
 
-            if (bridgePolitics.isChecked){
+            if (bridgeSignupPolitics.isChecked){
 
                 getAccontData()
                 toLoginScreen()
@@ -54,13 +54,13 @@ class SignupActivity : AppCompatActivity() {
             }
         }
 
-        bridgeCancel.setOnClickListener {
+        bridgeSignupCancel.setOnClickListener {
 
             toWelcomeScreen()
 
         }
 
-        bridgeLogin.setOnClickListener {
+        bridgeSignupLogin.setOnClickListener {
 
             toLoginScreen()
 
