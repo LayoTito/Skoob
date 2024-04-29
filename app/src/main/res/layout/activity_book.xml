@@ -14,7 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#1B1919"
-        tools:context=".BookActivity">
+        tools:context=".BookActivity"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="-17dp">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -47,7 +49,11 @@
             android:layout_width="145dp"
             android:layout_height="44dp"
             android:layout_marginStart="20dp"
+<<<<<<< HEAD
+            android:layout_marginTop="144dp"
+=======
             android:layout_marginTop="15dp"
+>>>>>>> 00f4e09881dd64536014a1b092f9fa3bfcbbec84
             android:fontFamily="serif"
             android:text="Reviews"
             android:textColor="#FFFFFF"
@@ -58,13 +64,77 @@
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <TextView
+            android:id="@+id/textView8"
+            android:layout_width="376dp"
+            android:layout_height="45dp"
+            android:text="━━━━━━━━ ✤ ━━━━━━━━"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="429dp" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/estrela"
+            app:srcCompat="@drawable/estrela"
+            tools:layout_editor_absoluteX="133dp"
+            tools:layout_editor_absoluteY="599dp" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/estrela"
+            tools:layout_editor_absoluteX="185dp"
+            tools:layout_editor_absoluteY="599dp" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/estrela"
+            tools:layout_editor_absoluteX="233dp"
+            tools:layout_editor_absoluteY="598dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/estrela"
+            tools:layout_editor_absoluteX="284dp"
+            tools:layout_editor_absoluteY="597dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/estrela"
+            tools:layout_editor_absoluteX="334dp"
+            tools:layout_editor_absoluteY="598dp"
+
+            />
+
+        <TextView
             android:id="@+id/textView6"
-            android:layout_width="326dp"
-            android:layout_height="103dp"
+            android:layout_width="368dp"
+            android:layout_height="163dp"
             android:layout_marginStart="20dp"
+<<<<<<< HEAD
+            android:layout_marginTop="132dp"
+            android:layout_marginEnd="20dp"
+=======
             android:layout_marginTop="15dp"
+>>>>>>> 00f4e09881dd64536014a1b092f9fa3bfcbbec84
             android:fontFamily="serif"
-            android:text="As Reviews"
+            android:text="Texto da Review"
             android:textColor="#FFFFFF"
             android:textSize="34sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -102,11 +172,47 @@
             android:id="@+id/imageButton9"
             android:layout_width="90dp"
             android:layout_height="90dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/maiss"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
+            tools:layout_editor_absoluteY="484dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2000dp"
+            android:text="Button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="208dp" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="89dp"
+            android:layout_height="89dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="579dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="365dp"
+            android:layout_height="55dp"
+            android:fontFamily="serif"
+            android:text="Nome do Autor"
+            android:textAlignment="center"
+            android:textColor="#E3D8D8"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="366dp" />
+=======
             app:layout_constraintHorizontal_bias="0.911"
             app:layout_constraintStart_toStartOf="@+id/textView10"
             tools:layout_editor_absoluteY="632dp" />
+>>>>>>> 00f4e09881dd64536014a1b092f9fa3bfcbbec84
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
