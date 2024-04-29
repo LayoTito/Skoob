@@ -44,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
 
         bridgeLoginCancel.setOnClickListener {
 
-            toWelcomeScreen()
+            finish()
 
         }
 
