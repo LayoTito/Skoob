@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#00FFFFFF"
+    android:fillViewport="true"
     tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="245dp"
-    android:fillViewport="true">
+    tools:layout_editor_absoluteY="245dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
@@ -19,11 +20,12 @@
             android:id="@+id/profileBackground"
             android:layout_width="411dp"
             android:layout_height="167dp"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/profileWalpaper" />
 
         <ImageView
             android:id="@+id/profileLine"
@@ -47,7 +49,7 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="@+id/profileLine"
             app:layout_constraintTop_toTopOf="@+id/profileBackground"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/profileIcon" />
 
         <TextView
             android:id="@+id/profileTextUser"
@@ -74,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="304dp"
+            android:layout_marginTop="280dp"
             android:text="Top 3"
             android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
@@ -88,9 +90,12 @@
             android:layout_height="159dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
+            android:background="#00352222"
+            android:elevation="2dp"
+            android:scaleType="centerInside"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/loginTextTextLogin"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/harryCover" />
 
         <TextView
             android:id="@+id/textView7"
@@ -110,11 +115,13 @@
             android:layout_width="103dp"
             android:layout_height="159dp"
             android:layout_marginStart="28dp"
+            android:background="#00FFFFFF"
+            android:scaleType="centerInside"
             app:layout_constraintBottom_toBottomOf="@+id/imageButton"
             app:layout_constraintStart_toEndOf="@+id/imageButton"
             app:layout_constraintTop_toTopOf="@+id/imageButton"
             app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/itCover" />
 
         <ImageButton
             android:id="@+id/imageButton9"
@@ -122,12 +129,14 @@
             android:layout_height="159dp"
             android:layout_marginStart="28dp"
             android:layout_marginEnd="20dp"
+            android:background="#00FFFFFF"
+            android:scaleType="centerInside"
             app:layout_constraintBottom_toBottomOf="@+id/imageButton8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageButton8"
             app:layout_constraintTop_toTopOf="@+id/imageButton8"
             app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/alienistaCover" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

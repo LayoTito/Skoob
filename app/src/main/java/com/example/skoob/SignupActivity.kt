@@ -56,7 +56,7 @@ class SignupActivity : AppCompatActivity() {
 
         bridgeSignupCancel.setOnClickListener {
 
-            toWelcomeScreen()
+            finish()
 
         }
 
