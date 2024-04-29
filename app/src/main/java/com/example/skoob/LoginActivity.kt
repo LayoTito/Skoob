@@ -2,6 +2,7 @@ package com.example.skoob
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,9 +14,9 @@ import com.example.skoob.objects.toWelcomeScreen
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var bridgeLoginUsername: TextView
-    private lateinit var bridgeLoginPassword: TextView
-    private lateinit var bridgeLoginTextSignup: TextView
+    private lateinit var bridgeLoginUsername: EditText
+    private lateinit var bridgeLoginPassword: EditText
+    private lateinit var bridgeLoginTextSignup: EditText
     private lateinit var bridgeLoginLogin: Button
     private lateinit var bridgeLoginCancel: Button
 

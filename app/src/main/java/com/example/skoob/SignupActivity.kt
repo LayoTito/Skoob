@@ -1,8 +1,10 @@
 package com.example.skoob
 
+import DatabaseHelper
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -14,10 +16,10 @@ import com.example.skoob.objects.toWelcomeScreen
 
 class SignupActivity : AppCompatActivity() {
 
-    private lateinit var bridgeSignupEmail: TextView
-    private lateinit var bridgeSignupUsername: TextView
-    private lateinit var bridgeSignupPassword: TextView
-    private lateinit var bridgeSignupLogin: TextView
+    private lateinit var bridgeSignupEmail: EditText
+    private lateinit var bridgeSignupUsername: EditText
+    private lateinit var bridgeSignupPassword: EditText
+    private lateinit var bridgeSignupLogin: EditText
     private lateinit var bridgeSignupPolitics: CheckBox
     private lateinit var bridgeSignupCreateAccont: Button
     private lateinit var bridgeSignupCancel: Button
@@ -43,6 +45,26 @@ class SignupActivity : AppCompatActivity() {
         bridgeSignupCreateAccont.setOnClickListener {
 
             if (bridgeSignupPolitics.isChecked){
+
+                val data = DatabaseHelper(name = "TABLE_NAME")
+
+                val dbHelper = DatabaseHelper(context)
+                val db = dbHelper.writableDatabase
+
+                val value = ContentValues().apply {
+
+                    put("name", data.name)
+
+                }
+
+                val newRowId = db?.insert("mytable", null, values)
+
+                if (newRowId != -1L) {
+
+
+                }else {
+
+                }
 
                 getAccontData()
                 toLoginScreen()

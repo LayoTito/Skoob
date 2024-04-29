@@ -26,13 +26,13 @@ class WelcomeActivity : AppCompatActivity() {
         bridgeWelcomeSignup = findViewById(R.id.welcomeButtonSignUp)
         bridgeWelcomeLogin = findViewById(R.id.welcomeButtonLogIn)
 
-        bridgeWelcomeSignup.setOnClickListener(){
+        bridgeWelcomeSignup.setOnClickListener {
 
             toSignupScreen()
 
         }
 
-        bridgeWelcomeLogin.setOnClickListener() {
+        bridgeWelcomeLogin.setOnClickListener {
 
             toLoginScreen()
 
