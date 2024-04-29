@@ -162,7 +162,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/profileImageSquare"
+            android:id="@+id/bookImageSquare"
             android:layout_width="388dp"
             android:layout_height="213dp"
             android:layout_marginTop="580dp"
@@ -180,10 +180,10 @@
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="@+id/profileImageSquare"
+            app:layout_constraintEnd_toEndOf="@+id/bookImageSquare"
             app:layout_constraintHorizontal_bias="0.434"
-            app:layout_constraintStart_toStartOf="@+id/profileImageSquare"
-            app:layout_constraintTop_toTopOf="@+id/profileImageSquare"
+            app:layout_constraintStart_toStartOf="@+id/bookImageSquare"
+            app:layout_constraintTop_toTopOf="@+id/bookImageSquare"
             tools:srcCompat="@drawable/profileIcon" />
 
         <ImageView
@@ -192,10 +192,10 @@
             android:layout_height="18dp"
             android:layout_marginTop="55dp"
             android:tint="#FAA72C"
-            app:layout_constraintEnd_toEndOf="@+id/profileImageSquare"
+            app:layout_constraintEnd_toEndOf="@+id/bookImageSquare"
             app:layout_constraintHorizontal_bias="0.556"
-            app:layout_constraintStart_toStartOf="@+id/profileImageSquare"
-            app:layout_constraintTop_toTopOf="@+id/profileImageSquare"
+            app:layout_constraintStart_toStartOf="@+id/bookImageSquare"
+            app:layout_constraintTop_toTopOf="@+id/bookImageSquare"
             tools:srcCompat="@drawable/estrela" />
 
         <ImageView
@@ -251,11 +251,11 @@
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
             android:textColor="#D3D3D3"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/profileImageSquare"
-            app:layout_constraintEnd_toEndOf="@+id/profileImageSquare"
+            app:layout_constraintBottom_toBottomOf="@+id/bookImageSquare"
+            app:layout_constraintEnd_toEndOf="@+id/bookImageSquare"
             app:layout_constraintHorizontal_bias="0.861"
-            app:layout_constraintStart_toStartOf="@+id/profileImageSquare"
-            app:layout_constraintTop_toTopOf="@+id/profileImageSquare"
+            app:layout_constraintStart_toStartOf="@+id/bookImageSquare"
+            app:layout_constraintTop_toTopOf="@+id/bookImageSquare"
             app:layout_constraintVertical_bias="0.801" />
 
         <TextView
@@ -266,18 +266,18 @@
             android:text="Username Example"
             android:textColor="#FFFFFF"
             android:textColorLink="#EDEDED"
-            app:layout_constraintEnd_toEndOf="@+id/profileImageSquare"
+            app:layout_constraintEnd_toEndOf="@+id/bookImageSquare"
             app:layout_constraintHorizontal_bias="0.837"
-            app:layout_constraintStart_toStartOf="@+id/profileImageSquare"
-            app:layout_constraintTop_toTopOf="@+id/profileImageSquare" />
+            app:layout_constraintStart_toStartOf="@+id/bookImageSquare"
+            app:layout_constraintTop_toTopOf="@+id/bookImageSquare" />
 
         <ImageView
             android:id="@+id/bookImageReviewBook"
             android:layout_width="119dp"
             android:layout_height="174dp"
             android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="@+id/profileImageSquare"
-            app:layout_constraintTop_toTopOf="@+id/profileImageSquare"
+            app:layout_constraintBottom_toBottomOf="@+id/bookImageSquare"
+            app:layout_constraintTop_toTopOf="@+id/bookImageSquare"
             tools:layout_editor_absoluteX="26dp"
             tools:srcCompat="@drawable/bookcover1" />
 
