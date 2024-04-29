@@ -3,14 +3,16 @@ package com.example.skoob
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.skoob.objects.toHomeScreen
 import com.example.skoob.objects.toSignupScreen
-import com.example.skoob.objects.toWelcomeScreen
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
 
@@ -19,6 +21,11 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var bridgeLoginTextSignup: EditText
     private lateinit var bridgeLoginLogin: Button
     private lateinit var bridgeLoginCancel: Button
+
+    private lateinit var auth: FirebaseAuth
+
+    private var inputLoginEmail: String = ""
+    private var inputLoginPassword: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,9 +43,12 @@ class LoginActivity : AppCompatActivity() {
         bridgeLoginLogin = findViewById(R.id.loginButtonLogin)
         bridgeLoginCancel = findViewById(R.id.loginButtonCancel)
 
+        auth = Firebase.auth
+
         bridgeLoginLogin.setOnClickListener {
 
-            getData()
+            getAccountDataLogIn()
+            logIn()
             toHomeScreen()
 
         }
@@ -52,13 +62,35 @@ class LoginActivity : AppCompatActivity() {
         bridgeLoginTextSignup.setOnClickListener {
 
             toSignupScreen()
+            finish()
 
         }
 
     }
 
-    fun getData() {
+    private fun getAccountDataLogIn() {
+
+        inputLoginEmail = bridgeLoginUsername.toString()
+        inputLoginPassword = bridgeLoginPassword.toString()
 
     }
 
+    private fun logIn() {
+
+        auth.signInWithEmailAndPassword(inputLoginEmail, inputLoginPassword)
+            .addOnCompleteListener(this) {task ->
+
+                if(task.isSuccessful) {
+
+                    Toast.makeText(this, "Successful", Toast.LENGTH_SHORT).show()
+
+                    toHomeScreen()
+
+                } else {
+
+                    Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
+
+                }
+            }
+    }
 }

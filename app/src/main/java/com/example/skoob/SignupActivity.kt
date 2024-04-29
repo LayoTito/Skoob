@@ -1,19 +1,18 @@
 package com.example.skoob
 
-import DatabaseHelper
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.skoob.objects.toLoginScreen
-import com.example.skoob.objects.toWelcomeScreen
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class SignupActivity : AppCompatActivity() {
@@ -23,10 +22,16 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var bridgeSignupPassword: EditText
     private lateinit var bridgeSignupLogin: EditText
     private lateinit var bridgeSignupPolitics: CheckBox
-    private lateinit var bridgeSignupCreateAccont: Button
+    private lateinit var bridgeSignupCreateAccount: Button
     private lateinit var bridgeSignupCancel: Button
 
     private lateinit var auth: FirebaseAuth
+
+    private var inputSignupEmail: String = ""
+    private var inputSignupUsername: String = ""
+    private var inputSignupPassword: String = ""
+
+    private val emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\$"
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -39,35 +44,27 @@ class SignupActivity : AppCompatActivity() {
             insets
         }
 
-        super.onStart()
-
-            val currentUser = auth.currentUser
-
-            if(currentUser != null) {
-
-                reload()
-
-            }
-
+        auth = Firebase.auth
 
         bridgeSignupEmail = findViewById(R.id.signupTextEmail)
         bridgeSignupUsername = findViewById(R.id.signupTextUsername)
         bridgeSignupPassword = findViewById(R.id.signupTextPassword)
         bridgeSignupLogin = findViewById(R.id.signupTextLogin)
         bridgeSignupPolitics = findViewById(R.id.signupCheckBoxPolitics)
-        bridgeSignupCreateAccont = findViewById(R.id.signupButtonCreateAccount)
+        bridgeSignupCreateAccount = findViewById(R.id.signupButtonCreateAccount)
         bridgeSignupCancel = findViewById(R.id.signupButtonCancel)
 
-        bridgeSignupCreateAccont.setOnClickListener {
+        bridgeSignupCreateAccount.setOnClickListener {
 
-            if (bridgeSignupPolitics.isChecked){
+            if (bridgeSignupPolitics.isChecked) {
 
-                getAccontData()
-                toLoginScreen()
+                getAccountDataSignUp()
 
-            } else {
+                if(isEverythingValid()) {
 
-                Toast.makeText(this, "Para a criação de contas, é necessario aceitar os termos de uso", Toast.LENGTH_LONG).show()
+                    createAccount()
+
+                }
 
             }
         }
@@ -81,13 +78,100 @@ class SignupActivity : AppCompatActivity() {
         bridgeSignupLogin.setOnClickListener {
 
             toLoginScreen()
+            finish()
 
         }
     }
 
-    fun getAccontData() {
+    private fun isValidEmail(): Boolean {
 
+        return inputSignupEmail.matches(emailRegex.toRegex())
+
+    }
+
+    private fun isValidUsername(): Boolean {
+
+        val hasSpecialCharacter = Regex("[!@#\$%^&*(),.?\":{}|<>\\s]")
+
+        return hasSpecialCharacter.containsMatchIn(inputSignupUsername)
+
+    }
+
+    private fun isValidPassword(): Boolean {
+
+        val regex = Regex("[a-zA-Z0-9!@#\$%^&*(),.?\":{}|<>\\s]")
+
+        return inputSignupPassword.length >= 5 && regex.containsMatchIn(inputSignupPassword)
+
+    }
+
+    private fun isEverythingValid(): Boolean {
+
+        var i = 0
+
+        if(isValidEmail()) {
+
+            i++
+
+        } else {
+
+            Toast.makeText(this, "Error invalid email", Toast.LENGTH_SHORT).show()
+
+        }
+
+        if(isValidPassword()) {
+
+            i++
+
+        } else {
+
+            Toast.makeText(this, "The password need to have ate least 5 characters, with a letter, number and a special character", Toast.LENGTH_SHORT).show()
+
+        }
+
+        if(!isValidUsername()) {
+
+            i++
+
+        } else {
+
+            Toast.makeText(this, "Error invalid username", Toast.LENGTH_SHORT).show()
+
+        }
+
+        return i == 3
+
+    }
+
+    private fun getAccountDataSignUp() {
+
+        inputSignupEmail = bridgeSignupEmail.toString()
+        inputSignupUsername = bridgeSignupUsername.toString()
+        inputSignupPassword = bridgeSignupPassword.toString()
 
 
     }
+
+    private fun createAccount() {
+
+        auth.createUserWithEmailAndPassword(inputSignupEmail, inputSignupPassword)
+            .addOnCompleteListener(this) { task ->
+
+                if(task.isSuccessful) {
+
+                    Toast.makeText(this, "created", Toast.LENGTH_SHORT).show()
+
+                    toLoginScreen()
+
+                } else {
+
+                    Toast.makeText(this, "not created", Toast.LENGTH_SHORT).show()
+
+
+                }
+
+            }
+
+    }
+
 }
