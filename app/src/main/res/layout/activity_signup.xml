@@ -140,7 +140,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/signupImageSquareIcon"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_marginTop="75dp"
