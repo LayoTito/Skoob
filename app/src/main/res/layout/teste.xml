@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#000000"
+    android:outlineAmbientShadowColor="#000000">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="388dp"
+        android:layout_height="213dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#575757"
+        android:fallbackLineSpacing="false"
+        android:handwritingBoundsOffsetRight="12dp"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="119dp"
+        android:layout_height="174dp"
+        android:scaleType="centerCrop"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="39dp"
+        tools:srcCompat="@drawable/bookcover1" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="43dp"
+        tools:srcCompat="@drawable/profileIcon" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="142dp"
+        android:layout_height="25dp"
+        android:text="Username Example"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#EDEDED"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="47dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="215dp"
+        android:layout_height="112dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+        android:textColor="#D3D3D3"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="104dp" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:tint="#FAA72C"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="70dp"
+        tools:srcCompat="@drawable/estrela" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:tint="#FAA72C"
+        tools:layout_editor_absoluteX="309dp"
+        tools:layout_editor_absoluteY="70dp"
+        tools:srcCompat="@drawable/estrela" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:tint="#FAA72C"
+        tools:layout_editor_absoluteX="286dp"
+        tools:layout_editor_absoluteY="70dp"
+        tools:srcCompat="@drawable/estrela" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:tint="#FAA72C"
+        tools:layout_editor_absoluteX="263dp"
+        tools:layout_editor_absoluteY="70dp"
+        tools:srcCompat="@drawable/estrela" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:tint="#FAA72C"
+        tools:layout_editor_absoluteX="240dp"
+        tools:layout_editor_absoluteY="70dp"
+        tools:srcCompat="@drawable/estrela" />
+</androidx.constraintlayout.widget.ConstraintLayout>
