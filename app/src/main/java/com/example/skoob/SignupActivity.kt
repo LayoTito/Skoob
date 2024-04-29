@@ -13,6 +13,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.skoob.objects.toLoginScreen
 import com.example.skoob.objects.toWelcomeScreen
+import com.google.firebase.auth.FirebaseAuth
+
 
 class SignupActivity : AppCompatActivity() {
 
@@ -24,7 +26,10 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var bridgeSignupCreateAccont: Button
     private lateinit var bridgeSignupCancel: Button
 
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_signup)
@@ -34,8 +39,19 @@ class SignupActivity : AppCompatActivity() {
             insets
         }
 
+        super.onStart()
+
+            val currentUser = auth.currentUser
+
+            if(currentUser != null) {
+
+                reload()
+
+            }
+
+
         bridgeSignupEmail = findViewById(R.id.signupTextEmail)
-        bridgeSignupUsername = findViewById(R.id.signupTextEmail)
+        bridgeSignupUsername = findViewById(R.id.signupTextUsername)
         bridgeSignupPassword = findViewById(R.id.signupTextPassword)
         bridgeSignupLogin = findViewById(R.id.signupTextLogin)
         bridgeSignupPolitics = findViewById(R.id.signupCheckBoxPolitics)
@@ -45,26 +61,6 @@ class SignupActivity : AppCompatActivity() {
         bridgeSignupCreateAccont.setOnClickListener {
 
             if (bridgeSignupPolitics.isChecked){
-
-                val data = DatabaseHelper(name = "TABLE_NAME")
-
-                val dbHelper = DatabaseHelper(context)
-                val db = dbHelper.writableDatabase
-
-                val value = ContentValues().apply {
-
-                    put("name", data.name)
-
-                }
-
-                val newRowId = db?.insert("mytable", null, values)
-
-                if (newRowId != -1L) {
-
-
-                }else {
-
-                }
 
                 getAccontData()
                 toLoginScreen()

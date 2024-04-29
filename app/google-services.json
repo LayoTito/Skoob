@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "1048376352775",
-    "project_id": "skoob-database",
-    "storage_bucket": "skoob-database.appspot.com"
+    "project_number": "317199850673",
+    "project_id": "skoob-data-base",
+    "storage_bucket": "skoob-data-base.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1048376352775:android:e41b68eca5729b453fcaa2",
+        "mobilesdk_app_id": "1:317199850673:android:d078da23d7893378be5690",
         "android_client_info": {
           "package_name": "com.example.skoob"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAcV22iH84BrBXieCcTfZ3YbKzAsPT9XHc"
+          "current_key": "AIzaSyBMuaJI41ha0f2cyxnTY580bCvP_eNGzEg"
         }
       ],
       "services": {

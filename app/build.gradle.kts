@@ -49,6 +49,8 @@ dependencies {
     implementation(libs.firebase.database)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
+    implementation("com.firebaseui:firebase-ui-auth:7.2.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
