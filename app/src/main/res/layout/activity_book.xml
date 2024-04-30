@@ -235,7 +235,7 @@
             tools:ignore="TouchTargetSizeCheck" />
 
         <ImageButton
-            android:id="@+id/bookButtonFavorite"
+            android:id="@+id/bookButtonAdd"
             android:layout_width="54dp"
             android:layout_height="57dp"
             android:layout_marginStart="-5dp"
