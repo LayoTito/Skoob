@@ -1,14 +1,12 @@
 package com.example.skoob
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.skoob.objects.toLoginScreen
-import com.example.skoob.objects.toSignupScreen
 
 class WelcomeActivity : AppCompatActivity() {
 
@@ -30,15 +28,29 @@ class WelcomeActivity : AppCompatActivity() {
         bridgeWelcomeSignup.setOnClickListener {
 
             toSignupScreen()
+            finish()
 
         }
 
         bridgeWelcomeLogin.setOnClickListener {
 
             toLoginScreen()
+            finish()
 
         }
     }
 
-    fun clickLogin(view: View) {}
+    private fun toLoginScreen() {
+
+        val intentLogin = Intent(this, LoginActivity::class.java)
+        startActivity(intentLogin)
+    }
+
+    private fun toSignupScreen() {
+
+        val intentSignup = Intent(this, SignupActivity::class.java)
+        startActivity(intentSignup)
+
+    }
+
 }

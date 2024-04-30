@@ -23,7 +23,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,VisualLintTextFieldSize"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/loginTextPassword"
@@ -40,7 +42,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginTextUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/loginTextUsername"
+        tools:ignore="HardcodedText,TextFields,VisualLintTextFieldSize"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/loginTextPolitics"
@@ -56,7 +60,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/loginButtonLogin"
@@ -72,7 +77,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginTextPolitics"
         app:strokeColor="#FFFFFF"
-        app:strokeWidth="2dp" />
+        app:strokeWidth="2dp"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/loginButtonCancel"
@@ -89,7 +95,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/loginButtonLogin"
         app:layout_constraintTop_toTopOf="@+id/loginButtonLogin"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/loginTextNoAccount"
@@ -102,14 +109,15 @@
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButtonLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/loginButtonLogin"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/loginTextSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="Crie sua conta."
+        android:text="@string/crie_sua_conta"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/loginTextNoAccount"
@@ -127,7 +135,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

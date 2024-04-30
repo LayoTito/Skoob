@@ -38,7 +38,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintButtonSize" />
 
     <EditText
         android:id="@+id/signupTextEmail"
@@ -56,7 +57,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextFields" />
+        tools:ignore="TextFields,VisualLintTextFieldSize"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/signupTextUsername"
@@ -73,7 +75,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupTextEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/signupTextEmail"
+        android:autofillHints=""
+        tools:ignore="VisualLintTextFieldSize" />
 
     <EditText
         android:id="@+id/signupTextPassword"
@@ -91,7 +95,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signupTextUsername"
-        tools:ignore="TextFields" />
+        tools:ignore="TextFields,VisualLintTextFieldSize"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/signupButtonCreateAccount"
@@ -108,7 +113,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signupCheckBoxPolitics"
         app:strokeColor="#FFFFFF"
-        app:strokeWidth="2dp" />
+        app:strokeWidth="2dp"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/signupTextAccount"
@@ -149,7 +155,8 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="TODO" />
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
