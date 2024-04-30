@@ -261,13 +261,27 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginTop="6dp"
-            android:background="#323232"
+            android:background="#00323232"
             android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.982"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/profileIcon" />
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Name"
+            app:layout_constraintBottom_toBottomOf="@+id/homeButtonSearch"
+            app:layout_constraintEnd_toStartOf="@+id/homeButtonSearchConfirmation"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/homeButtonSearch"
+            app:layout_constraintTop_toTopOf="@+id/homeButtonSearch"
+            app:layout_constraintVertical_bias="1.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

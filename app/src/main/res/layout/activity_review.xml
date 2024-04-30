@@ -9,7 +9,7 @@
     tools:context=".ReviewActivity">
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/reviewButtonReturn"
         android:layout_width="56dp"
         android:layout_height="50dp"
         android:background="@drawable/x"
@@ -17,7 +17,7 @@
         tools:layout_editor_absoluteY="7dp" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/reviewBookCover"
         android:layout_width="146dp"
         android:layout_height="180dp"
         android:layout_marginEnd="20dp"
@@ -26,7 +26,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/reviewTextTitle"
         android:layout_width="357dp"
         android:layout_height="51dp"
         android:fontFamily="serif"
@@ -38,7 +38,7 @@
         tools:layout_editor_absoluteY="6dp" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/reviewButtonStar_5"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/estrela"
@@ -46,7 +46,7 @@
         tools:layout_editor_absoluteY="286dp" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/reviewButtonStar_3"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/estrela"
@@ -54,7 +54,7 @@
         tools:layout_editor_absoluteY="286dp" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/reviewButtonStar_4"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/estrela"
@@ -62,7 +62,7 @@
         tools:layout_editor_absoluteY="286dp" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/reviewButtonStar_2"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/estrela"
@@ -70,7 +70,7 @@
         tools:layout_editor_absoluteY="286dp" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/reviewButtonStar_1"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
@@ -79,7 +79,7 @@
         tools:layout_editor_absoluteY="286dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/reviewTextBookTitle"
         android:layout_width="193dp"
         android:layout_height="93dp"
         android:layout_marginStart="20dp"
@@ -92,24 +92,25 @@
         tools:layout_editor_absoluteY="122dp" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/reviewTextReview"
         android:layout_width="378dp"
         android:layout_height="185dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
         android:fontFamily="serif"
+        android:gravity="center_vertical"
         android:inputType="text"
         android:text="Escreva sua review..."
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textColor="#FFFFFF"
-        android:textSize="28sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="388dp" />
 
     <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/reviewButtonFavorite"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginEnd="20dp"
@@ -118,7 +119,7 @@
         tools:layout_editor_absoluteY="275dp" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/reviewCheckboxPublic"
         android:layout_width="361dp"
         android:layout_height="79dp"
         android:layout_marginStart="20dp"

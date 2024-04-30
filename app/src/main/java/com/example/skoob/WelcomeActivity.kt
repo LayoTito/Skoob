@@ -30,15 +30,15 @@ class WelcomeActivity : AppCompatActivity() {
         bridgeWelcomeSignup.setOnClickListener {
 
             toSignupScreen()
+            finish()
 
         }
 
         bridgeWelcomeLogin.setOnClickListener {
 
             toLoginScreen()
+            finish()
 
         }
     }
-
-    fun clickLogin(view: View) {}
 }

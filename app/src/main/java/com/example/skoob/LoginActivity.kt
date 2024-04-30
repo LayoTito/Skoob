@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.skoob.objects.toHomeScreen
 import com.example.skoob.objects.toSignupScreen
+import com.example.skoob.objects.toWelcomeScreen
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -49,12 +50,14 @@ class LoginActivity : AppCompatActivity() {
 
             getAccountDataLogIn()
             logIn()
+            finish()
             toHomeScreen()
 
         }
 
         bridgeLoginCancel.setOnClickListener {
 
+            toWelcomeScreen()
             finish()
 
         }
