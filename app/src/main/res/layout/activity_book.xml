@@ -43,7 +43,7 @@
             app:layout_constraintHorizontal_bias="0.014"
             app:layout_constraintStart_toStartOf="@+id/bookImageSquare"
             app:layout_constraintTop_toTopOf="@+id/bookImageSquare"
-            tools:srcCompat="@drawable/profileIcon"
+            tools:srcCompat="@drawable/profile_icon"
             />
 
         <ImageView

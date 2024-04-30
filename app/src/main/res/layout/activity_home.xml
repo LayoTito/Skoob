@@ -268,7 +268,7 @@
             app:layout_constraintHorizontal_bias="0.456"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText,TextSizeCheck" />
 
         <ImageView
             android:id="@+id/imageView16"
@@ -298,23 +298,26 @@
             android:layout_width="180dp"
             android:layout_height="70dp"
             android:background="@drawable/skoob_icon"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/toolbar2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:importantForAccessibility="no" />
 
-        <!--<ImageButton
+        <ImageButton
             android:id="@+id/homeImageProfilePic"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginTop="6dp"
-            android:background="#323232"
+            android:background="#00323232"
+            android:importantForAccessibility="no"
             android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.982"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/profile_icon"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:importantForAccessibility="no" /> -->
+            tools:ignore="SpeakableTextPresentCheck" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
