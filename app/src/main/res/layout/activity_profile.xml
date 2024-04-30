@@ -25,7 +25,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/profileWalpaper" />
+            tools:srcCompat="@drawable/profilewalpaper" />
 
         <ImageView
             android:id="@+id/profileImageLine"
@@ -49,7 +49,7 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/profileIcon" />
+            tools:srcCompat="@drawable/profileicon" />
 
         <TextView
             android:id="@+id/profileTextUsername"
@@ -72,22 +72,8 @@
             android:text="Phrase"
             android:textColor="#FFFFFF"
             android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="@+id/profileTextUsername"
-            app:layout_constraintStart_toStartOf="@+id/profileTextUsername"
-            app:layout_constraintTop_toBottomOf="@+id/profileTextUsername" />
-
-        <TextView
-            android:id="@+id/profileTextUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/sarala"
-            android:text="User Name"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@+id/profileImageUserIcon"
-            app:layout_constraintHorizontal_bias="0.335"
-            app:layout_constraintStart_toStartOf="@+id/profileImageUserIcon"
-            app:layout_constraintTop_toBottomOf="@+id/profileImageUserIcon" />
+            tools:layout_editor_absoluteX="185dp"
+            tools:layout_editor_absoluteY="236dp" />
 
         <TextView
             android:id="@+id/profileTextFavorites"
@@ -115,7 +101,7 @@
             android:scaleType="centerInside"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profileTextFavorites"
-            tools:srcCompat="@drawable/harryCover" />
+            tools:srcCompat="@drawable/harrycover" />
 
         <ImageButton
             android:id="@+id/profileButtonFavoriteBook2"
@@ -128,7 +114,7 @@
             app:layout_constraintStart_toEndOf="@+id/profileButtonFavoriteBook1"
             app:layout_constraintTop_toTopOf="@+id/profileButtonFavoriteBook1"
             app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@drawable/itCover" />
+            tools:srcCompat="@drawable/itcover" />
 
         <ImageButton
             android:id="@+id/profileButtonFavoriteBook3"
@@ -143,7 +129,7 @@
             app:layout_constraintStart_toEndOf="@+id/profileButtonFavoriteBook2"
             app:layout_constraintTop_toTopOf="@+id/profileButtonFavoriteBook2"
             app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@drawable/alienistaCover" />
+            tools:srcCompat="@drawable/alienistacover" />
 
         <TextView
             android:id="@+id/profileTextLastReviews"
@@ -184,7 +170,7 @@
             app:layout_constraintHorizontal_bias="0.434"
             app:layout_constraintStart_toStartOf="@+id/bookImageSquare"
             app:layout_constraintTop_toTopOf="@+id/bookImageSquare"
-            tools:srcCompat="@drawable/profileIcon" />
+            tools:srcCompat="@drawable/profileicon" />
 
         <ImageView
             android:id="@+id/bookImageStar_1"

@@ -267,7 +267,7 @@
             app:layout_constraintHorizontal_bias="0.982"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/profileIcon" />
+            app:srcCompat="@drawable/profileicon" />
 
         <EditText
             android:id="@+id/editTextText"

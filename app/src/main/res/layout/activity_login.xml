@@ -119,7 +119,7 @@
         app:layout_constraintTop_toTopOf="@+id/loginTextNoAccount" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/loginIconLong"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_marginTop="75dp"
