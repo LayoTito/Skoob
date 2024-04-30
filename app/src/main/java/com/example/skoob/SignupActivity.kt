@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -20,7 +21,7 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var bridgeSignupEmail: EditText
     private lateinit var bridgeSignupUsername: EditText
     private lateinit var bridgeSignupPassword: EditText
-    private lateinit var bridgeSignupLogin: EditText
+    private lateinit var bridgeSignupLogin: TextView
     private lateinit var bridgeSignupPolitics: CheckBox
     private lateinit var bridgeSignupCreateAccount: Button
     private lateinit var bridgeSignupCancel: Button
@@ -62,9 +63,14 @@ class SignupActivity : AppCompatActivity() {
 
                 if(isEverythingValid()) {
 
+                    Toast.makeText(this, "Error invalid username", Toast.LENGTH_SHORT).show()
                     createAccount()
 
                 }
+
+            }else {
+
+                Toast.makeText(this, "You need to corfim the check box", Toast.LENGTH_SHORT).show()
 
             }
         }

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -17,7 +18,7 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var bridgeLoginUsername: EditText
     private lateinit var bridgeLoginPassword: EditText
-    private lateinit var bridgeLoginTextSignup: EditText
+    private lateinit var bridgeLoginTextSignup: TextView
     private lateinit var bridgeLoginLogin: Button
     private lateinit var bridgeLoginCancel: Button
 
