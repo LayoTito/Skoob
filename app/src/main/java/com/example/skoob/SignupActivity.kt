@@ -61,12 +61,8 @@ class SignupActivity : AppCompatActivity() {
 
                 getAccountDataSignUp()
 
-                if(isEverythingValid()) {
+                createAccount()
 
-                    Toast.makeText(this, "Error invalid username", Toast.LENGTH_SHORT).show()
-                    createAccount()
-
-                }
 
             }else {
 
@@ -98,9 +94,9 @@ class SignupActivity : AppCompatActivity() {
 
     private fun isValidUsername(): Boolean {
 
-        val hasSpecialCharacter = Regex("[!@#\$%^&*(),.?\":{}|<>\\s]")
+        val hasSpecialCharacter = Regex("[!@#\$ %^&*(),.?\":{}|<>\\s]")
 
-        return hasSpecialCharacter.containsMatchIn(inputSignupUsername)
+        return !hasSpecialCharacter.containsMatchIn(inputSignupUsername)
 
     }
 
@@ -152,9 +148,9 @@ class SignupActivity : AppCompatActivity() {
 
     private fun getAccountDataSignUp() {
 
-        inputSignupEmail = bridgeSignupEmail.toString()
-        inputSignupUsername = bridgeSignupUsername.toString()
-        inputSignupPassword = bridgeSignupPassword.toString()
+        inputSignupEmail = bridgeSignupEmail.text.toString()
+        inputSignupUsername = bridgeSignupUsername.text.toString()
+        inputSignupPassword = bridgeSignupPassword.text.toString()
 
 
     }
