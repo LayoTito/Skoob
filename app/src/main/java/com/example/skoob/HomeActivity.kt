@@ -23,6 +23,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var bridgeHomeBook11: ImageButton
     private lateinit var bridgeHomeBook12: ImageButton
     private lateinit var bridgeHomeBook13: ImageButton
+    private lateinit var bridgeHomeIcon: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +48,7 @@ class HomeActivity : AppCompatActivity() {
             bridgeHomeBook11 = findViewById(R.id.homeButtonTop10_8)
             bridgeHomeBook12 = findViewById(R.id.homeButtonTop10_9)
             bridgeHomeBook13 = findViewById(R.id.homeButtonTop10_10)
+            bridgeHomeIcon = findViewById(R.id.homeButtonLongIcon)
 
                 bridgeHomeBook1.setOnClickListener {
 
@@ -105,6 +107,7 @@ class HomeActivity : AppCompatActivity() {
                 bridgeHomeBook10.setOnClickListener {
 
                     toBookScreen()
+
                 }
 
                 bridgeHomeBook11.setOnClickListener {
@@ -126,13 +129,27 @@ class HomeActivity : AppCompatActivity() {
                 }
 
 
-                private fun toBookScreen() {
+                bridgeHomeIcon.setOnClickListener {
 
-                    val intentBook = Intent(this, LoginActivity::class.java)
-                    startActivity(intentBook)
+                    toHomeScreen()
+                    finish()
 
                 }
 
 
+
+    }
+
+    private fun toHomeScreen() {
+
+        val intentHome = Intent(this, HomeActivity::class.java)
+        startActivity(intentHome)
+
+    }
+
+    private fun toBookScreen() {
+
+        val intentBook = Intent(this, BookActivity::class.java)
+        startActivity(intentBook)
     }
 }

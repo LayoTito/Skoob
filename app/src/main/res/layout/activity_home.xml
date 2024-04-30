@@ -30,17 +30,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/homeImageLongIcon"
-            android:layout_width="180dp"
-            android:layout_height="70dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.002"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/skoob_icon"
-            android:importantForAccessibility="no" />
-
         <ImageButton
             android:id="@+id/homeButtonTopRated2"
             android:layout_width="100dp"
@@ -69,15 +58,15 @@
 
         <TextView
             android:id="@+id/homeTextTopRated"
-            android:layout_width="182dp"
-            android:layout_height="30dp"
+            android:layout_width="232dp"
+            android:layout_height="36dp"
             android:layout_marginTop="168dp"
             android:autoSizeTextType="none"
             android:fontFamily="@font/sarala"
             android:text="MELHOR AVALIADOS"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="14sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toStartOf="parent"
@@ -145,28 +134,29 @@
             android:id="@+id/homeButtonTop10_2"
             android:layout_width="100dp"
             android:layout_height="160dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="24dp"
-            android:background="@drawable/bookcover5"
 
+            android:background="@drawable/bookcover5"
+            android:importantForAccessibility="no"
             android:scaleType="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.038"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/homeButtonTop10_1"
-            android:importantForAccessibility="no" />
+            app:layout_constraintTop_toBottomOf="@+id/homeButtonTop10_1" />
 
         <ImageButton
             android:id="@+id/homeButtonTop10_3"
             android:layout_width="100dp"
             android:layout_height="160dp"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="30dp"
             android:background="@drawable/bookcover4"
 
+            android:importantForAccessibility="no"
             app:layout_constraintBottom_toBottomOf="@+id/homeButtonTop10_2"
             app:layout_constraintStart_toEndOf="@+id/homeButtonTop10_2"
             app:layout_constraintTop_toTopOf="@+id/homeButtonTop10_2"
-            app:layout_constraintVertical_bias="1.0"
-            android:importantForAccessibility="no" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <ImageButton
             android:id="@+id/homeButtonTop10_4"
@@ -174,21 +164,21 @@
             android:layout_height="160dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/bookcover6"
-            app:layout_constraintBottom_toBottomOf="@+id/homeButtonTop10_3"
+            android:importantForAccessibility="no"
 
+            app:layout_constraintBottom_toBottomOf="@+id/homeButtonTop10_3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/homeButtonTop10_3"
             app:layout_constraintTop_toTopOf="@+id/homeButtonTop10_3"
-            app:layout_constraintVertical_bias="0.0"
-            android:importantForAccessibility="no" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageButton
             android:id="@+id/homeButtonTop10_5"
             android:layout_width="100dp"
             android:layout_height="160dp"
-            android:layout_marginTop="40dp"
 
+            android:layout_marginTop="40dp"
             android:background="@drawable/bookcover7"
             android:importantForAccessibility="no"
             app:layout_constraintEnd_toEndOf="@+id/homeButtonTop10_2"
@@ -201,14 +191,14 @@
             android:id="@+id/homeButtonTop10_6"
             android:layout_width="100dp"
             android:layout_height="160dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="30dp"
             android:background="@drawable/bookcover8"
 
+            android:importantForAccessibility="no"
             app:layout_constraintBottom_toBottomOf="@+id/homeButtonTop10_5"
             app:layout_constraintStart_toEndOf="@+id/homeButtonTop10_5"
             app:layout_constraintTop_toTopOf="@+id/homeButtonTop10_5"
-            app:layout_constraintVertical_bias="1.0"
-            android:importantForAccessibility="no" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <ImageButton
             android:id="@+id/homeButtonTop10_7"
@@ -241,13 +231,13 @@
             android:id="@+id/homeButtonTop10_9"
             android:layout_width="100dp"
             android:layout_height="160dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="30dp"
             android:background="@drawable/bookcover11"
+            android:importantForAccessibility="no"
             app:layout_constraintBottom_toBottomOf="@+id/homeButtonTop10_8"
             app:layout_constraintStart_toEndOf="@+id/homeButtonTop10_8"
             app:layout_constraintTop_toTopOf="@+id/homeButtonTop10_8"
-            app:layout_constraintVertical_bias="0.0"
-            android:importantForAccessibility="no" />
+            app:layout_constraintVertical_bias="0.0" />
 
 
         <ImageButton
@@ -273,7 +263,7 @@
             android:text="TOP 10 DA SEMANA"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="14sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.456"
             app:layout_constraintStart_toStartOf="parent"
@@ -302,6 +292,14 @@
             app:layout_constraintVertical_bias="0.509"
             app:srcCompat="@drawable/ornament1"
             android:importantForAccessibility="no" />
+
+        <ImageButton
+            android:id="@+id/homeButtonLongIcon"
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+            android:background="@drawable/skoob_icon"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
 
         <!--<ImageButton
             android:id="@+id/homeImageProfilePic"
