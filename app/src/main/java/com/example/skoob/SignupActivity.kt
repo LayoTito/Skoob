@@ -66,7 +66,7 @@ class SignupActivity : AppCompatActivity() {
 
             }else {
 
-                Toast.makeText(this, "You need to corfim the check box", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "You need to confirm the check box", Toast.LENGTH_SHORT).show()
 
             }
         }
