@@ -42,4 +42,14 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="conhe_a_obras_revisite_momentos">Conheça obras. Revisite momentos.</string>
+    <string name="todo">TODO</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="eu_concordo_com_os_termos_de_politica_e_privacidade">Eu concordo com os termos de politica e privacidade.</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="senha">Senha</string>
+    <string name="j_tem_uma_conta">Já tem uma conta?</string>
+    <string name="fa_a_o_seu_login">Faça o seu login.</string>
 </resources>

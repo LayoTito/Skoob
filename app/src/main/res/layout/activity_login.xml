@@ -11,7 +11,7 @@
     <EditText
         android:id="@+id/loginTextUsername"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="308dp"
         android:layout_marginEnd="40dp"
@@ -28,7 +28,7 @@
     <EditText
         android:id="@+id/loginTextPassword"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="40dp"
@@ -61,7 +61,7 @@
     <Button
         android:id="@+id/loginButtonLogin"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#00FFFFFF"
@@ -77,7 +77,7 @@
     <Button
         android:id="@+id/loginButtonCancel"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginEnd="40dp"
         android:backgroundTint="#FFFFFF"
         android:fontFamily="serif"

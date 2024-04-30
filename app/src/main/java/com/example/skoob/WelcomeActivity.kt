@@ -1,6 +1,7 @@
 package com.example.skoob
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -38,4 +39,6 @@ class WelcomeActivity : AppCompatActivity() {
 
         }
     }
+
+    fun clickLogin(view: View) {}
 }
