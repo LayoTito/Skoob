@@ -30,85 +30,75 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.478"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="SpeakableTextPresentCheck,VisualLintButtonSize" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/bookImageIcon"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_marginTop="16dp"
-            android:importantForAccessibility="no"
+            android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="@+id/bookImageSquare"
-            app:layout_constraintHorizontal_bias="0.014"
+            app:layout_constraintHorizontal_bias="0.434"
             app:layout_constraintStart_toStartOf="@+id/bookImageSquare"
             app:layout_constraintTop_toTopOf="@+id/bookImageSquare"
-            tools:srcCompat="@drawable/profile_icon"
-            />
+            tools:srcCompat="@drawable/profileIcon" />
 
         <ImageView
-            android:id="@+id/bookImageStar_3"
+            android:id="@+id/bookImageStar_1"
             android:layout_width="18dp"
             android:layout_height="18dp"
-            android:layout_marginStart="8dp"
-            android:importantForAccessibility="no"
-            app:layout_constraintBottom_toBottomOf="@+id/bookImageStar_2"
-            app:layout_constraintStart_toEndOf="@+id/bookImageStar_2"
-            app:layout_constraintTop_toTopOf="@+id/bookImageStar_2"
-            app:layout_constraintVertical_bias="0.0"
-            app:tint="#FAA72C"
-            tools:srcCompat="@drawable/estrela" />
-
-        <ImageView
-            android:id="@+id/bookImageStar_5"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
-            android:layout_marginStart="8dp"
-            android:importantForAccessibility="no"
-            app:layout_constraintBottom_toBottomOf="@+id/bookImageStar_4"
-            app:layout_constraintStart_toEndOf="@+id/bookImageStar_4"
-            app:layout_constraintTop_toTopOf="@+id/bookImageStar_4"
-            app:layout_constraintVertical_bias="0.0"
-            app:tint="#FAA72C"
-            tools:srcCompat="@drawable/estrela" />
-
-        <ImageView
-            android:id="@+id/bookImageStar_4"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
-            android:layout_marginStart="8dp"
-            android:importantForAccessibility="no"
-            app:layout_constraintBottom_toBottomOf="@+id/bookImageStar_3"
-            app:layout_constraintStart_toEndOf="@+id/bookImageStar_3"
-            app:layout_constraintTop_toTopOf="@+id/bookImageStar_3"
-            app:layout_constraintVertical_bias="0.0"
-            app:tint="#FAA72C"
+            android:layout_marginTop="55dp"
+            android:tint="#FAA72C"
+            app:layout_constraintEnd_toEndOf="@+id/bookImageSquare"
+            app:layout_constraintHorizontal_bias="0.556"
+            app:layout_constraintStart_toStartOf="@+id/bookImageSquare"
+            app:layout_constraintTop_toTopOf="@+id/bookImageSquare"
             tools:srcCompat="@drawable/estrela" />
 
         <ImageView
             android:id="@+id/bookImageStar_2"
             android:layout_width="18dp"
             android:layout_height="18dp"
-            android:layout_marginStart="8dp"
-            android:importantForAccessibility="no"
+            android:layout_marginStart="4dp"
+            android:tint="#FAA72C"
             app:layout_constraintBottom_toBottomOf="@+id/bookImageStar_1"
             app:layout_constraintStart_toEndOf="@+id/bookImageStar_1"
             app:layout_constraintTop_toTopOf="@+id/bookImageStar_1"
             app:layout_constraintVertical_bias="0.0"
-            app:tint="#FAA72C"
             tools:srcCompat="@drawable/estrela" />
 
         <ImageView
-            android:id="@+id/bookImageStar_1"
+            android:id="@+id/bookImageStar_3"
             android:layout_width="18dp"
             android:layout_height="18dp"
-            android:layout_marginTop="40dp"
-            android:importantForAccessibility="no"
-            app:layout_constraintEnd_toEndOf="@+id/bookImageSquare"
-            app:layout_constraintHorizontal_bias="0.175"
-            app:layout_constraintStart_toStartOf="@+id/bookImageSquare"
-            app:layout_constraintTop_toTopOf="@+id/bookImageSquare"
-            app:tint="#FAA72C"
+            android:layout_marginStart="4dp"
+            android:tint="#FAA72C"
+            app:layout_constraintBottom_toBottomOf="@+id/bookImageStar_2"
+            app:layout_constraintStart_toEndOf="@+id/bookImageStar_2"
+            app:layout_constraintTop_toTopOf="@+id/bookImageStar_2"
+            app:layout_constraintVertical_bias="0.0"
+            tools:srcCompat="@drawable/estrela" />
+
+        <ImageView
+            android:id="@+id/bookImageStar_4"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="4dp"
+            android:tint="#FAA72C"
+            app:layout_constraintBottom_toBottomOf="@+id/bookImageStar_3"
+            app:layout_constraintStart_toEndOf="@+id/bookImageStar_3"
+            app:layout_constraintTop_toTopOf="@+id/bookImageStar_3"
+            tools:srcCompat="@drawable/estrela" />
+
+        <ImageView
+            android:id="@+id/bookImageStar_5"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="4dp"
+            android:tint="#FAA72C"
+            app:layout_constraintBottom_toBottomOf="@+id/bookImageStar_4"
+            app:layout_constraintStart_toEndOf="@+id/bookImageStar_4"
+            app:layout_constraintTop_toTopOf="@+id/bookImageStar_4"
             tools:srcCompat="@drawable/estrela" />
 
         <Button
@@ -125,34 +115,55 @@
 
         <TextView
             android:id="@+id/bookTextReview"
+<<<<<<< HEAD
             android:layout_width="365dp"
             android:layout_height="109dp"
             android:fontFamily="@font/sarala"
+=======
+            android:layout_width="215dp"
+            android:layout_height="112dp"
+>>>>>>> 72d1f0523c50fefc8bf23287e6cd7f668232cb33
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
             android:textColor="#D3D3D3"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/bookImageSquare"
             app:layout_constraintEnd_toEndOf="@+id/bookImageSquare"
+<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.217"
             app:layout_constraintStart_toStartOf="@+id/bookImageSquare"
             app:layout_constraintTop_toTopOf="@+id/bookImageSquare"
             app:layout_constraintVertical_bias="0.75"
             tools:ignore="HardcodedText,TextSizeCheck" />
+=======
+            app:layout_constraintHorizontal_bias="0.861"
+            app:layout_constraintStart_toStartOf="@+id/bookImageSquare"
+            app:layout_constraintTop_toTopOf="@+id/bookImageSquare"
+            app:layout_constraintVertical_bias="0.801" />
+>>>>>>> 72d1f0523c50fefc8bf23287e6cd7f668232cb33
 
         <TextView
             android:id="@+id/bookTextUsernameReview"
             android:layout_width="142dp"
             android:layout_height="25dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/sarala"
+            android:layout_marginTop="24dp"
             android:text="Username Example"
             android:textColor="#FFFFFF"
             android:textColorLink="#EDEDED"
             app:layout_constraintEnd_toEndOf="@+id/bookImageSquare"
-            app:layout_constraintHorizontal_bias="0.26"
+            app:layout_constraintHorizontal_bias="0.837"
+            app:layout_constraintStart_toStartOf="@+id/bookImageSquare"
+            app:layout_constraintTop_toTopOf="@+id/bookImageSquare" />
+
+        <ImageView
+            android:id="@+id/bookImageReviewBook"
+            android:layout_width="119dp"
+            android:layout_height="174dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="@+id/bookImageSquare"
             app:layout_constraintTop_toTopOf="@+id/bookImageSquare"
-            tools:ignore="HardcodedText,TextSizeCheck" />
+            tools:srcCompat="@drawable/bookcover2" />
 
         <ImageView
             android:id="@+id/bookImageCover"
@@ -175,12 +186,24 @@
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             android:textAlignment="gravity"
             android:textColor="#B6B6B6"
+<<<<<<< HEAD
             app:layout_constraintBottom_toBottomOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="@+id/button2"
             app:layout_constraintHorizontal_bias="0.466"
             app:layout_constraintStart_toStartOf="@+id/button2"
             app:layout_constraintTop_toTopOf="@+id/button2"
             tools:ignore="HardcodedText,TextSizeCheck" />
+=======
+<<<<<<< HEAD
+            app:layout_constraintEnd_toEndOf="@+id/bookTextAuthorDate"
+            app:layout_constraintStart_toStartOf="@+id/bookTextAuthorDate"
+            app:layout_constraintTop_toBottomOf="@+id/bookTextAuthorDate" />
+=======
+            tools:ignore="HardcodedText,TextSizeCheck"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="357dp" />
+>>>>>>> 3641d966626fa8833cfab3d659b025c67bd91812
+>>>>>>> 72d1f0523c50fefc8bf23287e6cd7f668232cb33
 
         <TextView
             android:id="@+id/bookTextTitle"
@@ -188,15 +211,18 @@
             android:layout_height="161dp"
             android:layout_marginTop="72dp"
             android:fontFamily="@font/sarala"
+<<<<<<< HEAD
+            android:text="Titulo do livro"
+=======
             android:text="Queen Of Air and Darkness"
             android:textAlignment="center"
+>>>>>>> 3641d966626fa8833cfab3d659b025c67bd91812
             android:textColor="#DFDFDF"
             android:textSize="34sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.921"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="HardcodedText" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/bookTextAuthorDate"
@@ -204,15 +230,19 @@
             android:layout_height="27dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/sarala"
+<<<<<<< HEAD
+            android:text="Autor e data de publicação"
+            android:textSize="14sp"
+=======
             android:text="Cassandra Clare"
             android:textAlignment="center"
             android:textColor="#BFA3A3"
             android:textSize="20sp"
+>>>>>>> 3641d966626fa8833cfab3d659b025c67bd91812
             app:layout_constraintEnd_toEndOf="@+id/bookTextTitle"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/bookTextTitle"
-            app:layout_constraintTop_toBottomOf="@+id/bookTextTitle"
-            tools:ignore="HardcodedText,TextContrastCheck,TextSizeCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/bookTextTitle" />
 
         <TextView
             android:id="@+id/bookTextRating"
@@ -226,14 +256,19 @@
             app:layout_constraintBottom_toBottomOf="@+id/bookImageStarRate"
             app:layout_constraintStart_toEndOf="@+id/bookImageStarRate"
             app:layout_constraintTop_toTopOf="@+id/bookImageStarRate"
-            app:layout_constraintVertical_bias="1.0"
-            tools:ignore="HardcodedText" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <ImageView
             android:id="@+id/bookImageStarRate"
             android:layout_width="27dp"
             android:layout_height="32dp"
+<<<<<<< HEAD
+            app:srcCompat="@drawable/estrela"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="317dp" />
+=======
             android:importantForAccessibility="no"
+<<<<<<< HEAD
             app:layout_constraintBottom_toBottomOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="@+id/button2"
             app:layout_constraintHorizontal_bias="0.058"
@@ -241,6 +276,12 @@
             app:layout_constraintTop_toTopOf="@+id/button2"
             app:layout_constraintVertical_bias="0.939"
             app:srcCompat="@drawable/estrela" />
+=======
+            app:srcCompat="@drawable/estrela"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="471dp" />
+>>>>>>> 3641d966626fa8833cfab3d659b025c67bd91812
+>>>>>>> 72d1f0523c50fefc8bf23287e6cd7f668232cb33
 
         <ImageButton
             android:id="@+id/bookButtonReturn"
@@ -248,16 +289,28 @@
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
             android:backgroundTint="#00FFFFFF"
-            android:importantForAccessibility="no"
             android:scaleType="centerCrop"
+            android:tint="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.075"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/arrow_left"
-            app:tint="#FFFFFF"
-            tools:ignore="TouchTargetSizeCheck" />
+            app:srcCompat="@drawable/arrow_left" />
 
+<<<<<<< HEAD
+        <ImageButton
+            android:id="@+id/bookButtonFavorite"
+            android:layout_width="54dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="3dp"
+            android:backgroundTint="#009E9E9E"
+            android:scaleType="centerCrop"
+            android:tint="#EAEAEA"
+            app:layout_constraintBottom_toBottomOf="@+id/bookTextRating"
+            app:layout_constraintStart_toEndOf="@+id/bookTextRating"
+            app:layout_constraintTop_toTopOf="@+id/bookTextRating"
+            app:srcCompat="@android:drawable/ic_menu_add" />
+=======
         <TextView
             android:id="@+id/textDateReview"
             android:layout_width="wrap_content"
@@ -309,12 +362,18 @@
             android:textAllCaps="true"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
+<<<<<<< HEAD
             app:layout_constraintBottom_toTopOf="@+id/bookImageSquare"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.269"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button2"
             app:layout_constraintVertical_bias="0.6" />
+=======
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="522dp" />
+>>>>>>> 3641d966626fa8833cfab3d659b025c67bd91812
+>>>>>>> 72d1f0523c50fefc8bf23287e6cd7f668232cb33
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

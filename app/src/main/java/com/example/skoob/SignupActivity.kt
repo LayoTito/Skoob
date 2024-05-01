@@ -1,7 +1,9 @@
 package com.example.skoob
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -13,6 +15,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 
@@ -27,6 +30,7 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var bridgeSignupCancel: Button
 
     private lateinit var auth: FirebaseAuth
+    private val db = Firebase.firestore
 
     private var inputSignupEmail: String = ""
     private var inputSignupUsername: String = ""
@@ -60,11 +64,10 @@ class SignupActivity : AppCompatActivity() {
             if (bridgeSignupPolitics.isChecked) {
 
                 getAccountDataSignUp()
-
                 createAccount()
 
 
-            }else {
+            } else {
 
                 Toast.makeText(this, "You need to confirm the check box", Toast.LENGTH_SHORT).show()
 
@@ -112,7 +115,7 @@ class SignupActivity : AppCompatActivity() {
 
         var i = 0
 
-        if(isValidEmail()) {
+        if (isValidEmail()) {
 
             i++
 
@@ -122,17 +125,21 @@ class SignupActivity : AppCompatActivity() {
 
         }
 
-        if(isValidPassword()) {
+        if (isValidPassword()) {
 
             i++
 
         } else {
 
-            Toast.makeText(this, "The password need to have ate least 5 characters, with a letter, number and a special character", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this,
+                "The password need to have ate least 5 characters, with a letter, number and a special character",
+                Toast.LENGTH_SHORT
+            ).show()
 
         }
 
-        if(!isValidUsername()) {
+        if (!isValidUsername()) {
 
             i++
 
@@ -160,11 +167,12 @@ class SignupActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(inputSignupEmail, inputSignupPassword)
             .addOnCompleteListener(this) { task ->
 
-                if(task.isSuccessful) {
+                if (task.isSuccessful) {
 
                     Toast.makeText(this, "created", Toast.LENGTH_SHORT).show()
 
-                    toLoginScreen()
+                    writeUserData()
+                    toHomeScreen()
 
                 } else {
 
@@ -175,6 +183,32 @@ class SignupActivity : AppCompatActivity() {
 
             }
     }
+
+    private fun writeUserData() {
+
+        val currentUser = Firebase.auth.currentUser
+
+        if(currentUser != null) {
+
+            val user = hashMapOf(
+                "uid" to currentUser.uid,
+                "username" to inputSignupUsername,
+                "email" to inputSignupEmail,
+                "password" to inputSignupPassword,
+            )
+
+            db.collection("users")
+                .add(user)
+                .addOnSuccessListener { documentReference ->
+                    Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+                }
+                .addOnFailureListener { e ->
+                    Log.w(TAG, "Error adding document", e)
+                }
+        }
+
+    }
+
     private fun toLoginScreen() {
 
         val intentLogin = Intent(this, LoginActivity::class.java)
@@ -186,6 +220,12 @@ class SignupActivity : AppCompatActivity() {
         val intentWelcome = Intent(this, WelcomeActivity::class.java)
         startActivity(intentWelcome)
 
+    }
+
+    private fun toHomeScreen() {
+
+        val intentHome = Intent(this, LoginActivity::class.java)
+        startActivity(intentHome)
     }
 
 }
