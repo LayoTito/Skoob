@@ -36,8 +36,6 @@ class SignupActivity : AppCompatActivity() {
     private var inputSignupUsername: String = ""
     private var inputSignupPassword: String = ""
 
-    private val emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\$"
-
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -64,8 +62,12 @@ class SignupActivity : AppCompatActivity() {
             if (bridgeSignupPolitics.isChecked) {
 
                 getAccountDataSignUp()
-                createAccount()
 
+                if(isEverythingValid()) {
+
+                    createAccount()
+
+                }
 
             } else {
 
@@ -89,12 +91,6 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
-    private fun isValidEmail(): Boolean {
-
-        return inputSignupEmail.matches(emailRegex.toRegex())
-
-    }
-
     private fun isValidUsername(): Boolean {
 
         val hasSpecialCharacter = Regex("[!@#\$ %^&*(),.?\":{}|<>\\s]")
@@ -114,16 +110,6 @@ class SignupActivity : AppCompatActivity() {
     private fun isEverythingValid(): Boolean {
 
         var i = 0
-
-        if (isValidEmail()) {
-
-            i++
-
-        } else {
-
-            Toast.makeText(this, "Error invalid email", Toast.LENGTH_SHORT).show()
-
-        }
 
         if (isValidPassword()) {
 
@@ -149,7 +135,7 @@ class SignupActivity : AppCompatActivity() {
 
         }
 
-        return i == 3
+        return i == 2
 
     }
 
@@ -169,14 +155,12 @@ class SignupActivity : AppCompatActivity() {
 
                 if (task.isSuccessful) {
 
-                    Toast.makeText(this, "created", Toast.LENGTH_SHORT).show()
-
                     writeUserData()
-                    toHomeScreen()
+                    toLoginScreen()
 
                 } else {
 
-                    Toast.makeText(this, "not created", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "invalid email", Toast.LENGTH_SHORT).show()
 
 
                 }
@@ -195,6 +179,8 @@ class SignupActivity : AppCompatActivity() {
                 "username" to inputSignupUsername,
                 "email" to inputSignupEmail,
                 "password" to inputSignupPassword,
+                "icon" to null,
+                "wallpaper" to null,
             )
 
             db.collection("users")
@@ -221,11 +207,4 @@ class SignupActivity : AppCompatActivity() {
         startActivity(intentWelcome)
 
     }
-
-    private fun toHomeScreen() {
-
-        val intentHome = Intent(this, LoginActivity::class.java)
-        startActivity(intentHome)
-    }
-
 }
