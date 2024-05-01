@@ -48,7 +48,7 @@ class ProfileActivity : AppCompatActivity() {
         bridgeProfileFavorite3 = findViewById(R.id.profileButtonFavoriteBook3)
         bridgeProfileReturn = findViewById(R.id.profileButtonReturn)
 
-        bridgeProfileUsernameComment = findViewById(R.id.profileTextUsernameReview)
+
         bridgeProfileBookReview = findViewById(R.id.profileImageReviewBook)
         bridgeProfileReviewBook = findViewById(R.id.profileTextReview)
         bridgeProfileStar1 = findViewById(R.id.profileImageStar_1)

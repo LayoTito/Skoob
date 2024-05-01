@@ -169,25 +169,14 @@
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             android:textAlignment="gravity"
             android:textColor="#B6B6B6"
-<<<<<<< HEAD
-            app:layout_constraintEnd_toEndOf="@+id/bookTextAuthorDate"
-            app:layout_constraintStart_toStartOf="@+id/bookTextAuthorDate"
-            app:layout_constraintTop_toBottomOf="@+id/bookTextAuthorDate" />
-=======
+
+        =======
             tools:ignore="HardcodedText,TextSizeCheck"
             tools:layout_editor_absoluteX="21dp"
             tools:layout_editor_absoluteY="357dp" />
 >>>>>>> 3641d966626fa8833cfab3d659b025c67bd91812
 
-        <TextView
-            android:id="@+id/bookTextTitle"
-            android:layout_width="207dp"
-            android:layout_height="161dp"
-            android:layout_marginTop="72dp"
-            android:fontFamily="@font/sarala"
-<<<<<<< HEAD
-            android:text="Titulo do livro"
-=======
+        =======
             android:text="Queen Of Air and Darkness"
             android:textAlignment="center"
 >>>>>>> 3641d966626fa8833cfab3d659b025c67bd91812
@@ -204,10 +193,8 @@
             android:layout_height="27dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/sarala"
-<<<<<<< HEAD
-            android:text="Autor e data de publicação"
-            android:textSize="14sp"
-=======
+
+        =======
             android:text="Cassandra Clare"
             android:textAlignment="center"
             android:textColor="#BFA3A3"
@@ -236,11 +223,8 @@
             android:id="@+id/bookImageStarRate"
             android:layout_width="27dp"
             android:layout_height="32dp"
-<<<<<<< HEAD
-            app:srcCompat="@drawable/estrela"
-            tools:layout_editor_absoluteX="28dp"
-            tools:layout_editor_absoluteY="317dp" />
-=======
+
+        =======
             android:importantForAccessibility="no"
             app:srcCompat="@drawable/estrela"
             tools:layout_editor_absoluteX="21dp"
@@ -261,7 +245,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/arrow_left" />
 
-<<<<<<< HEAD
         <ImageButton
             android:id="@+id/bookButtonFavorite"
             android:layout_width="54dp"
