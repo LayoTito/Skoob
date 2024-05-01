@@ -22,7 +22,7 @@
             android:id="@+id/bookImageSquare"
             android:layout_width="388dp"
             android:layout_height="213dp"
-            android:layout_marginTop="400dp"
+            android:layout_marginTop="564dp"
             android:backgroundTint="#575757"
             android:fallbackLineSpacing="false"
             android:handwritingBoundsOffsetRight="12dp"
@@ -101,6 +101,15 @@
             app:layout_constraintTop_toTopOf="@+id/bookImageStar_4"
             tools:srcCompat="@drawable/estrela" />
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="388dp"
+            android:layout_height="213dp"
+            android:backgroundTint="#575757"
+            app:cornerRadius="12dp"
+            tools:layout_editor_absoluteX="7dp"
+            tools:layout_editor_absoluteY="299dp" />
+
         <TextView
             android:id="@+id/bookTextReview"
             android:layout_width="215dp"
@@ -143,7 +152,8 @@
             android:id="@+id/bookImageCover"
             android:layout_width="145dp"
             android:layout_height="205dp"
-            android:layout_marginTop="112dp"
+            android:layout_marginTop="72dp"
+            android:importantForAccessibility="no"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.105"
@@ -153,38 +163,58 @@
 
         <TextView
             android:id="@+id/bookTextDescription"
-            android:layout_width="193dp"
-            android:layout_height="111dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="358dp"
+            android:layout_height="114dp"
+            android:fontFamily="@font/sarala"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             android:textAlignment="gravity"
             android:textColor="#B6B6B6"
+<<<<<<< HEAD
             app:layout_constraintEnd_toEndOf="@+id/bookTextAuthorDate"
             app:layout_constraintStart_toStartOf="@+id/bookTextAuthorDate"
             app:layout_constraintTop_toBottomOf="@+id/bookTextAuthorDate" />
+=======
+            tools:ignore="HardcodedText,TextSizeCheck"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="357dp" />
+>>>>>>> 3641d966626fa8833cfab3d659b025c67bd91812
 
         <TextView
             android:id="@+id/bookTextTitle"
-            android:layout_width="198dp"
-            android:layout_height="46dp"
-            android:layout_marginTop="120dp"
+            android:layout_width="207dp"
+            android:layout_height="161dp"
+            android:layout_marginTop="72dp"
             android:fontFamily="@font/sarala"
+<<<<<<< HEAD
             android:text="Titulo do livro"
+=======
+            android:text="Queen Of Air and Darkness"
+            android:textAlignment="center"
+>>>>>>> 3641d966626fa8833cfab3d659b025c67bd91812
             android:textColor="#DFDFDF"
-            android:textSize="18sp"
+            android:textSize="34sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.854"
+            app:layout_constraintHorizontal_bias="0.921"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/bookTextAuthorDate"
-            android:layout_width="192dp"
+            android:layout_width="206dp"
             android:layout_height="27dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/sarala"
+<<<<<<< HEAD
             android:text="Autor e data de publicação"
             android:textSize="14sp"
+=======
+            android:text="Cassandra Clare"
+            android:textAlignment="center"
+            android:textColor="#BFA3A3"
+            android:textSize="20sp"
+>>>>>>> 3641d966626fa8833cfab3d659b025c67bd91812
             app:layout_constraintEnd_toEndOf="@+id/bookTextTitle"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/bookTextTitle"
             app:layout_constraintTop_toBottomOf="@+id/bookTextTitle" />
 
@@ -193,7 +223,7 @@
             android:layout_width="61dp"
             android:layout_height="30dp"
             android:autoSizeTextType="uniform"
-            android:text="4,0/5"
+            android:text="4.32"
             android:textAlignment="center"
             android:textColor="#E3E3E3"
             android:textStyle="bold"
@@ -206,9 +236,16 @@
             android:id="@+id/bookImageStarRate"
             android:layout_width="27dp"
             android:layout_height="32dp"
+<<<<<<< HEAD
             app:srcCompat="@drawable/estrela"
             tools:layout_editor_absoluteX="28dp"
             tools:layout_editor_absoluteY="317dp" />
+=======
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/estrela"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="471dp" />
+>>>>>>> 3641d966626fa8833cfab3d659b025c67bd91812
 
         <ImageButton
             android:id="@+id/bookButtonReturn"
@@ -219,11 +256,12 @@
             android:scaleType="centerCrop"
             android:tint="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.043"
+            app:layout_constraintHorizontal_bias="0.075"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/arrow_left" />
 
+<<<<<<< HEAD
         <ImageButton
             android:id="@+id/bookButtonFavorite"
             android:layout_width="54dp"
@@ -236,6 +274,52 @@
             app:layout_constraintStart_toEndOf="@+id/bookTextRating"
             app:layout_constraintTop_toTopOf="@+id/bookTextRating"
             app:srcCompat="@android:drawable/ic_menu_add" />
+=======
+        <TextView
+            android:id="@+id/textDateReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sarala"
+            android:text="30/04/2024"
+            android:textColor="#FFFFFF"
+            tools:layout_editor_absoluteX="295dp"
+            tools:layout_editor_absoluteY="581dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="258dp"
+            android:layout_height="32dp"
+            android:fontFamily="@font/sarala"
+            android:text="Sinopse"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="314dp" />
+
+        <ImageButton
+            android:id="@+id/bookButtonAdd"
+            android:layout_width="54dp"
+            android:layout_height="57dp"
+            android:backgroundTint="#009E9E9E"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            app:srcCompat="@android:drawable/ic_menu_add"
+            app:tint="#FFFFFF"
+            tools:layout_editor_absoluteX="7dp"
+            tools:layout_editor_absoluteY="507dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="192dp"
+            android:layout_height="27dp"
+            android:fontFamily="@font/sarala"
+            android:text="Adicione sua review!"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="522dp" />
+>>>>>>> 3641d966626fa8833cfab3d659b025c67bd91812
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
