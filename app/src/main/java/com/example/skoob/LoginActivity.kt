@@ -83,8 +83,9 @@ class LoginActivity : AppCompatActivity() {
 
                 if(task.isSuccessful) {
 
-                    Toast.makeText(this, "Successful", Toast.LENGTH_SHORT).show()
+                    val currentUser = Firebase.auth.currentUser
 
+                    intent.putExtra("current user", currentUser)
                     toHomeScreen()
 
                 } else {

@@ -15,8 +15,9 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="308dp"
         android:layout_marginEnd="40dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Name"
+        android:hint="Email"
         android:inputType="text"
         android:textColor="#FFFFFF"
         android:textColorHint="#919191"
@@ -24,8 +25,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText,VisualLintTextFieldSize"
-        android:autofillHints="" />
+        tools:ignore="HardcodedText,VisualLintTextFieldSize" />
 
     <EditText
         android:id="@+id/loginTextPassword"

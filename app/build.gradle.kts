@@ -53,6 +53,7 @@ dependencies {
     implementation("com.firebaseui:firebase-ui-auth:7.2.0")
     implementation(libs.firebase.auth)
     implementation("com.google.firebase:firebase-storage")
+    implementation(libs.firebase.firestore.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

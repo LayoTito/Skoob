@@ -50,6 +50,7 @@ class ProfileActivity : AppCompatActivity() {
         bridgeProfileFavorite3 = findViewById(R.id.profileButtonFavoriteBook3)
         bridgeProfileReturn = findViewById(R.id.profileButtonReturn)
 
+
         bridgeProfileUsernameComment = findViewById(R.id.profileButtonUsernameReview)
         bridgeProfileIconComment = findViewById(R.id.profileButtonIcon)
         bridgeProfileBookReview = findViewById(R.id.profileButtonReviewBook)
