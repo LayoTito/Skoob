@@ -7,4 +7,129 @@
     android:layout_height="match_parent"
     android:background="#1B1919"
     android:foregroundTint="#FFFFFF"
-    tools:context=".ReviewActivity"/>
+    android:outlineAmbientShadowColor="#FFFFFF"
+    android:outlineSpotShadowColor="#FFFFFF"
+    tools:context=".ReviewActivity">
+
+    <ImageButton
+        android:id="@+id/reviewButtonReturn"
+        android:layout_width="41dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        android:tint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_left" />
+
+    <ImageView
+        android:id="@+id/reviewImageBook"
+        android:layout_width="152dp"
+        android:layout_height="221dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/alienista_cover"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <ImageButton
+        android:id="@+id/reviewButtonRate_1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="356dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/estrela" />
+
+    <ImageButton
+        android:id="@+id/reviewButtonRate_2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="356dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/estrela" />
+
+    <ImageButton
+        android:id="@+id/reviewButtonRate_3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="356dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/estrela" />
+
+    <ImageButton
+        android:id="@+id/reviewButtonRate_4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="356dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/estrela" />
+
+    <ImageButton
+        android:id="@+id/reviewButtonRate_5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="356dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.634"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/estrela" />
+
+    <ImageButton
+        android:id="@+id/reviewButtonFavorite"
+        android:layout_width="62dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#00502D2D"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/like"
+        tools:layout_editor_absoluteX="311dp"
+        tools:layout_editor_absoluteY="350dp" />
+
+    <EditText
+        android:id="@+id/reviewEditReview"
+        android:layout_width="350dp"
+        android:layout_height="203dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        android:textAlignment="viewStart"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="465dp" />
+
+    <TextView
+        android:id="@+id/reviewTextBookTitle"
+        android:layout_width="223dp"
+        android:layout_height="27dp"
+        android:fontFamily="@font/sarala"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="313dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
