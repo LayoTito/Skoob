@@ -133,6 +133,7 @@
         android:id="@+id/signupTextLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:layout_marginEnd="60dp"
         android:fontFamily="serif"
         android:text="@string/fa_a_o_seu_login"

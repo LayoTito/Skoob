@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class BookActivity : AppCompatActivity() {
 
+    //criação das pontes entre o back e o front-end
     private lateinit var bridgeBookAdd: ImageButton
     private lateinit var bridgeBookReviewIcon: ImageView
     private lateinit var bridgeBookReviewUsername: TextView
@@ -27,10 +28,13 @@ class BookActivity : AppCompatActivity() {
             insets
         }
 
+        //associação das variáveis com os elementos do front-end
         bridgeBookAdd = findViewById(R.id.bookButtonAdd)
         bridgeBookReviewIcon = findViewById(R.id.bookImageIcon)
         bridgeBookReviewUsername = findViewById(R.id.bookTextUsernameReview)
 
+
+        //associando o que acontecerá ao clicar
         bridgeBookAdd.setOnClickListener {
 
             toReviewScreen()
@@ -54,6 +58,7 @@ class BookActivity : AppCompatActivity() {
 
     }
 
+    //criação das funções que irão para outras telas
     private fun toProfileScreen() {
 
         val intentProfile = Intent(this, ProfileActivity::class.java)

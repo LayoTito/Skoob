@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class WelcomeActivity : AppCompatActivity() {
 
+    //criação das pontes entre o back e o front-end
     private lateinit var bridgeWelcomeSignup: Button
     private lateinit var bridgeWelcomeLogin: Button
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,9 +24,11 @@ class WelcomeActivity : AppCompatActivity() {
             insets
         }
 
+        //associação das variáveis com os elementos do front-end
         bridgeWelcomeSignup = findViewById(R.id.welcomeButtonSignUp)
         bridgeWelcomeLogin = findViewById(R.id.welcomeButtonLogIn)
 
+        //associando o que acontecerá ao clicar
         bridgeWelcomeSignup.setOnClickListener {
 
             toSignupScreen()
@@ -41,6 +44,7 @@ class WelcomeActivity : AppCompatActivity() {
         }
     }
 
+    //criação das funções que irão para outras telas
     private fun toLoginScreen() {
 
         val intentLogin = Intent(this, LoginActivity::class.java)

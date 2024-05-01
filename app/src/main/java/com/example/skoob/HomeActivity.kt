@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class HomeActivity : AppCompatActivity() {
 
+    //criação das pontes entre o back e o front-end
     private lateinit var bridgeHomeBook1: ImageButton
     private lateinit var bridgeHomeBook2: ImageButton
     private lateinit var bridgeHomeBook3: ImageButton
@@ -35,6 +36,7 @@ class HomeActivity : AppCompatActivity() {
             insets
         }
 
+            //associação das variáveis com os elementos do front-end
             bridgeHomeBook1 = findViewById(R.id.homeButtonTopRated1)
             bridgeHomeBook2 = findViewById(R.id.homeButtonTopRated2)
             bridgeHomeBook3 = findViewById(R.id.homeButtonTopRated3)
@@ -50,7 +52,9 @@ class HomeActivity : AppCompatActivity() {
             bridgeHomeBook13 = findViewById(R.id.homeButtonTop10_10)
             bridgeHomeIcon = findViewById(R.id.homeButtonLongIcon)
 
-                bridgeHomeBook1.setOnClickListener {
+
+                //associando o que acontecerá ao clicar
+                 bridgeHomeBook1.setOnClickListener {
 
                     toBookScreen()
 
@@ -140,6 +144,7 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
+    //criação das funções que irão para outras telas
     private fun toHomeScreen() {
 
         val intentHome = Intent(this, HomeActivity::class.java)

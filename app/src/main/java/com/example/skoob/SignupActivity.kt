@@ -21,6 +21,7 @@ import com.google.firebase.ktx.Firebase
 
 class SignupActivity : AppCompatActivity() {
 
+    //criação das pontes entre o back e o front-end
     private lateinit var bridgeSignupEmail: EditText
     private lateinit var bridgeSignupUsername: EditText
     private lateinit var bridgeSignupPassword: EditText
@@ -49,6 +50,7 @@ class SignupActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
+        //associação das variáveis com os elementos do front-end
         bridgeSignupEmail = findViewById(R.id.signupTextEmail)
         bridgeSignupUsername = findViewById(R.id.signupTextUsername)
         bridgeSignupPassword = findViewById(R.id.signupTextPassword)
@@ -59,6 +61,7 @@ class SignupActivity : AppCompatActivity() {
 
         bridgeSignupCreateAccount.setOnClickListener {
 
+            //verificação se aceitou os termos
             if (bridgeSignupPolitics.isChecked) {
 
                 getAccountDataSignUp()
@@ -91,6 +94,7 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
+    //verificação se o nome de usuário é válido
     private fun isValidUsername(): Boolean {
 
         val hasSpecialCharacter = Regex("[!@#\$ %^&*(),.?\":{}|<>\\s]")
@@ -99,6 +103,7 @@ class SignupActivity : AppCompatActivity() {
 
     }
 
+    //verificação se a senha é válida
     private fun isValidPassword(): Boolean {
 
         val regex = Regex("[a-zA-Z0-9!@#\$%^&*(),.?\":{}|<>\\s]")
@@ -107,6 +112,7 @@ class SignupActivity : AppCompatActivity() {
 
     }
 
+    //verificação se tudo está válido
     private fun isEverythingValid(): Boolean {
 
         var i = 0
@@ -139,6 +145,7 @@ class SignupActivity : AppCompatActivity() {
 
     }
 
+    //função para pegar os dados da conta
     private fun getAccountDataSignUp() {
 
         inputSignupEmail = bridgeSignupEmail.text.toString()
@@ -148,6 +155,7 @@ class SignupActivity : AppCompatActivity() {
 
     }
 
+    //função para criar a conta
     private fun createAccount() {
 
         auth.createUserWithEmailAndPassword(inputSignupEmail, inputSignupPassword)
@@ -168,6 +176,7 @@ class SignupActivity : AppCompatActivity() {
             }
     }
 
+    //função para escrever os dados do usuário no banco de dados
     private fun writeUserData() {
 
         val currentUser = Firebase.auth.currentUser
@@ -195,6 +204,7 @@ class SignupActivity : AppCompatActivity() {
 
     }
 
+    //criação das funções que irão para outras telas
     private fun toLoginScreen() {
 
         val intentLogin = Intent(this, LoginActivity::class.java)

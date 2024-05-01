@@ -13,14 +13,12 @@ import org.w3c.dom.Text
 
 class ProfileActivity : AppCompatActivity() {
 
-    //profile vars
+    //criação das pontes entre o back e o front-end
     private lateinit var bridgeProfileUsername: Text
     private lateinit var bridgeProfileFavorite1: ImageButton
     private lateinit var bridgeProfileFavorite2: ImageButton
     private lateinit var bridgeProfileFavorite3: ImageButton
     private lateinit var bridgeProfileReturn: ImageButton
-
-    //comments vars
     private lateinit var bridgeProfileUsernameComment: Button
     private lateinit var bridgeProfileIconComment: ImageButton
     private lateinit var bridgeProfileBookReview: ImageButton
@@ -44,13 +42,12 @@ class ProfileActivity : AppCompatActivity() {
             insets
         }
 
+        //associação das variáveis com os elementos do front-end
         bridgeProfileUsername = findViewById(R.id.profileTextUsername)
         bridgeProfileFavorite1 = findViewById(R.id.profileButtonFavoriteBook1)
         bridgeProfileFavorite2 = findViewById(R.id.profileButtonFavoriteBook2)
         bridgeProfileFavorite3 = findViewById(R.id.profileButtonFavoriteBook3)
         bridgeProfileReturn = findViewById(R.id.profileButtonReturn)
-
-
         bridgeProfileUsernameComment = findViewById(R.id.profileButtonUsernameReview)
         bridgeProfileIconComment = findViewById(R.id.profileButtonIcon)
         bridgeProfileBookReview = findViewById(R.id.profileButtonReviewBook)
@@ -63,6 +60,7 @@ class ProfileActivity : AppCompatActivity() {
 
 
 
+        //associando o que acontecerá ao clicar
         bridgeProfileFavorite1.setOnClickListener {
 
             toBookScreen() 
@@ -108,6 +106,7 @@ class ProfileActivity : AppCompatActivity() {
 
 
 }
+    //criação das funções que irão para outras telas
     private fun toHomeScreen() {
 
         val intentHome = Intent(this, HomeActivity::class.java)
