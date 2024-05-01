@@ -16,6 +16,7 @@ import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
 
+    //criação das pontes entre o back e o front-end
     private lateinit var bridgeLoginUsername: EditText
     private lateinit var bridgeLoginPassword: EditText
     private lateinit var bridgeLoginTextSignup: TextView
@@ -37,6 +38,7 @@ class LoginActivity : AppCompatActivity() {
             insets
         }
 
+        //associação das variáveis com os elementos do front-end
         bridgeLoginUsername = findViewById(R.id.loginTextUsername)
         bridgeLoginPassword = findViewById(R.id.loginTextPassword)
         bridgeLoginTextSignup = findViewById(R.id.loginTextSignup)
@@ -45,6 +47,7 @@ class LoginActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
+        //associando o que acontecerá ao clicar
         bridgeLoginLogin.setOnClickListener {
 
             getAccountDataLogIn()
@@ -69,6 +72,7 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
+    //função para pegar as informações da conta
     private fun getAccountDataLogIn() {
 
         inputLoginEmail = bridgeLoginUsername.toString()
@@ -76,6 +80,7 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
+    //função para login
     private fun logIn() {
 
         auth.signInWithEmailAndPassword(inputLoginEmail, inputLoginPassword)
@@ -96,6 +101,8 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
+
+    //criação das funções que irão para outras telas
     private fun toHomeScreen() {
 
         val intentHome = Intent(this, LoginActivity::class.java)
