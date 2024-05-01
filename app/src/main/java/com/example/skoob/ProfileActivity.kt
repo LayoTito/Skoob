@@ -2,6 +2,7 @@ package com.example.skoob
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
@@ -20,9 +21,10 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var bridgeProfileReturn: ImageButton
 
     //comments vars
-    private lateinit var bridgeProfileUsernameComment: Text
-    private lateinit var bridgeProfileBookReview: Text
-    private lateinit var bridgeProfileReviewBook: ImageView
+    private lateinit var bridgeProfileUsernameComment: Button
+    private lateinit var bridgeProfileIconComment: ImageButton
+    private lateinit var bridgeProfileBookReview: ImageButton
+    private lateinit var bridgeProfileReviewBook: Text
     private lateinit var bridgeProfileStar1: ImageView
     private lateinit var bridgeProfileStar2: ImageView
     private lateinit var bridgeProfileStar3: ImageView
@@ -48,8 +50,9 @@ class ProfileActivity : AppCompatActivity() {
         bridgeProfileFavorite3 = findViewById(R.id.profileButtonFavoriteBook3)
         bridgeProfileReturn = findViewById(R.id.profileButtonReturn)
 
-        bridgeProfileUsernameComment = findViewById(R.id.profileTextUsernameReview)
-        bridgeProfileBookReview = findViewById(R.id.profileImageReviewBook)
+        bridgeProfileUsernameComment = findViewById(R.id.profileButtonUsernameReview)
+        bridgeProfileIconComment = findViewById(R.id.profileButtonIcon)
+        bridgeProfileBookReview = findViewById(R.id.profileButtonReviewBook)
         bridgeProfileReviewBook = findViewById(R.id.profileTextReview)
         bridgeProfileStar1 = findViewById(R.id.profileImageStar_1)
         bridgeProfileStar2 = findViewById(R.id.profileImageStar_2)
@@ -61,7 +64,7 @@ class ProfileActivity : AppCompatActivity() {
 
         bridgeProfileFavorite1.setOnClickListener {
 
-            toBookScreen()
+            toBookScreen() 
 
         }
 
@@ -86,6 +89,22 @@ class ProfileActivity : AppCompatActivity() {
 
         }
 
+        bridgeProfileIconComment.setOnClickListener{
+
+            toProfileScreen()
+
+        }
+        bridgeProfileUsernameComment.setOnClickListener{
+
+            toProfileScreen()
+
+        }
+        bridgeProfileBookReview.setOnClickListener{
+
+            toBookScreen()
+
+        }
+
 
 }
     private fun toHomeScreen() {
@@ -99,5 +118,11 @@ class ProfileActivity : AppCompatActivity() {
 
         val intentBook = Intent(this, BookActivity::class.java)
         startActivity(intentBook)
+    }
+    private fun toProfileScreen() {
+
+        val intentProfile = Intent(this, ProfileActivity::class.java)
+        startActivity(intentProfile)
+
     }
 }

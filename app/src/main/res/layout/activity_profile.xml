@@ -173,7 +173,7 @@
             tools:ignore="VisualLintButtonSize" />
 
         <ImageButton
-            android:id="@+id/profileBuutonIcon"
+            android:id="@+id/profileButtonIcon"
             android:layout_width="61dp"
             android:layout_height="51dp"
             android:layout_marginTop="24dp"
@@ -282,10 +282,11 @@
             app:layout_constraintTop_toTopOf="@+id/profileImageSquare"
             tools:ignore="TextSizeCheck" />
 
-        <ImageView
-            android:id="@+id/profileImageReviewBook"
+        <ImageButton
+            android:id="@+id/profileButtonReviewBook"
             android:layout_width="119dp"
             android:layout_height="174dp"
+            android:background="#00FFFFFF"
             android:importantForAccessibility="no"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="@+id/profileImageSquare"
