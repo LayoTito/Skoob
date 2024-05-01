@@ -5,16 +5,23 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import org.w3c.dom.Text
 
 class ProfileActivity : AppCompatActivity() {
 
     //profile vars
-    private lateinit var bridgeProfileUsername: Text
+    private lateinit var bridgeProfileUsername: TextView
     private lateinit var bridgeProfileFavorite1: ImageButton
     private lateinit var bridgeProfileFavorite2: ImageButton
     private lateinit var bridgeProfileFavorite3: ImageButton
@@ -24,15 +31,14 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var bridgeProfileUsernameComment: Button
     private lateinit var bridgeProfileIconComment: ImageButton
     private lateinit var bridgeProfileBookReview: ImageButton
-    private lateinit var bridgeProfileReviewBook: Text
+    private lateinit var bridgeProfileReviewBook: TextView
     private lateinit var bridgeProfileStar1: ImageView
     private lateinit var bridgeProfileStar2: ImageView
     private lateinit var bridgeProfileStar3: ImageView
     private lateinit var bridgeProfileStar4: ImageView
     private lateinit var bridgeProfileStar5: ImageView
 
-
-
+    private val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,8 +55,6 @@ class ProfileActivity : AppCompatActivity() {
         bridgeProfileFavorite2 = findViewById(R.id.profileButtonFavoriteBook2)
         bridgeProfileFavorite3 = findViewById(R.id.profileButtonFavoriteBook3)
         bridgeProfileReturn = findViewById(R.id.profileButtonReturn)
-
-
         bridgeProfileUsernameComment = findViewById(R.id.profileButtonUsernameReview)
         bridgeProfileIconComment = findViewById(R.id.profileButtonIcon)
         bridgeProfileBookReview = findViewById(R.id.profileButtonReviewBook)
@@ -61,7 +65,19 @@ class ProfileActivity : AppCompatActivity() {
         bridgeProfileStar4 = findViewById(R.id.profileImageStar_4)
         bridgeProfileStar5 = findViewById(R.id.profileImageStar_5)
 
+        fetchUsernameForCurrentUser(OnCompleteListener { task ->
+            if (task.isSuccessful) {
+                val documentSnapshot = task.result
+                if (documentSnapshot != null && documentSnapshot.exists()) {
+                    val username = documentSnapshot.getString("username")
+                    if (username != null) {
+                        println("Username: $username")
 
+                        bridgeProfileUsername.text = username
+                    }
+                }
+            }
+        })
 
         bridgeProfileFavorite1.setOnClickListener {
 
@@ -108,6 +124,18 @@ class ProfileActivity : AppCompatActivity() {
 
 
 }
+
+    private fun fetchUsernameForCurrentUser(onCompleteListener: OnCompleteListener<DocumentSnapshot>) {
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        val currentUserId: String? = currentUser?.uid
+
+        val documentRef = db.collection("users").document(currentUserId.toString())
+
+        documentRef.get()
+            .addOnCompleteListener(onCompleteListener)
+    }
+
+
     private fun toHomeScreen() {
 
         val intentHome = Intent(this, HomeActivity::class.java)

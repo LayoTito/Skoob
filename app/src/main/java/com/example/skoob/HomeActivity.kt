@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class HomeActivity : AppCompatActivity() {
 
+    private lateinit var bridgeHomeProfileIcon: ImageButton
     private lateinit var bridgeHomeBook1: ImageButton
     private lateinit var bridgeHomeBook2: ImageButton
     private lateinit var bridgeHomeBook3: ImageButton
@@ -35,107 +36,113 @@ class HomeActivity : AppCompatActivity() {
             insets
         }
 
-            bridgeHomeBook1 = findViewById(R.id.homeButtonTopRated1)
-            bridgeHomeBook2 = findViewById(R.id.homeButtonTopRated2)
-            bridgeHomeBook3 = findViewById(R.id.homeButtonTopRated3)
-            bridgeHomeBook4 = findViewById(R.id.homeButtonTop10_1)
-            bridgeHomeBook5 = findViewById(R.id.homeButtonTop10_2)
-            bridgeHomeBook6 = findViewById(R.id.homeButtonTop10_3)
-            bridgeHomeBook7 = findViewById(R.id.homeButtonTop10_4)
-            bridgeHomeBook8 = findViewById(R.id.homeButtonTop10_5)
-            bridgeHomeBook9 = findViewById(R.id.homeButtonTop10_6)
-            bridgeHomeBook10 = findViewById(R.id.homeButtonTop10_7)
-            bridgeHomeBook11 = findViewById(R.id.homeButtonTop10_8)
-            bridgeHomeBook12 = findViewById(R.id.homeButtonTop10_9)
-            bridgeHomeBook13 = findViewById(R.id.homeButtonTop10_10)
-            bridgeHomeIcon = findViewById(R.id.homeButtonLongIcon)
+        bridgeHomeProfileIcon = findViewById(R.id.homeImageProfilePic)
+        bridgeHomeBook1 = findViewById(R.id.homeButtonTopRated1)
+        bridgeHomeBook2 = findViewById(R.id.homeButtonTopRated2)
+        bridgeHomeBook3 = findViewById(R.id.homeButtonTopRated3)
+        bridgeHomeBook4 = findViewById(R.id.homeButtonTop10_1)
+        bridgeHomeBook5 = findViewById(R.id.homeButtonTop10_2)
+        bridgeHomeBook6 = findViewById(R.id.homeButtonTop10_3)
+        bridgeHomeBook7 = findViewById(R.id.homeButtonTop10_4)
+        bridgeHomeBook8 = findViewById(R.id.homeButtonTop10_5)
+        bridgeHomeBook9 = findViewById(R.id.homeButtonTop10_6)
+        bridgeHomeBook10 = findViewById(R.id.homeButtonTop10_7)
+        bridgeHomeBook11 = findViewById(R.id.homeButtonTop10_8)
+        bridgeHomeBook12 = findViewById(R.id.homeButtonTop10_9)
+        bridgeHomeBook13 = findViewById(R.id.homeButtonTop10_10)
+        bridgeHomeIcon = findViewById(R.id.homeButtonLongIcon)
 
-                bridgeHomeBook1.setOnClickListener {
+        bridgeHomeProfileIcon.setOnClickListener {
 
-                    toBookScreen()
+            toProfileScreen()
 
-                }
+        }
 
-                bridgeHomeBook2.setOnClickListener {
+        bridgeHomeBook1.setOnClickListener {
 
-                    toBookScreen()
+            toBookScreen()
 
-                }
+        }
 
-                bridgeHomeBook3.setOnClickListener {
+        bridgeHomeBook2.setOnClickListener {
 
-                    toBookScreen()
+            toBookScreen()
 
-                }
+        }
 
-                bridgeHomeBook4.setOnClickListener {
+        bridgeHomeBook3.setOnClickListener {
 
-                    toBookScreen()
+            toBookScreen()
 
-                }
+        }
 
-                bridgeHomeBook5.setOnClickListener {
+        bridgeHomeBook4.setOnClickListener {
 
-                    toBookScreen()
+            toBookScreen()
 
-                }
+        }
 
-                bridgeHomeBook6.setOnClickListener {
+        bridgeHomeBook5.setOnClickListener {
 
-                    toBookScreen()
+            toBookScreen()
 
-                }
+        }
 
-                bridgeHomeBook7.setOnClickListener {
+        bridgeHomeBook6.setOnClickListener {
 
-                    toBookScreen()
+            toBookScreen()
 
-                }
+        }
 
-                bridgeHomeBook8.setOnClickListener {
+        bridgeHomeBook7.setOnClickListener {
 
-                    toBookScreen()
+            toBookScreen()
 
-                }
+        }
 
-                bridgeHomeBook9.setOnClickListener {
+        bridgeHomeBook8.setOnClickListener {
 
-                    toBookScreen()
+            toBookScreen()
 
-                }
+        }
 
-                bridgeHomeBook10.setOnClickListener {
+        bridgeHomeBook9.setOnClickListener {
 
-                    toBookScreen()
+            toBookScreen()
 
-                }
+        }
 
-                bridgeHomeBook11.setOnClickListener {
+        bridgeHomeBook10.setOnClickListener {
 
-                    toBookScreen()
+            toBookScreen()
 
-                }
+        }
 
-                bridgeHomeBook12.setOnClickListener {
+        bridgeHomeBook11.setOnClickListener {
 
-                    toBookScreen()
+            toBookScreen()
 
-                }
+        }
 
-                bridgeHomeBook13.setOnClickListener {
+        bridgeHomeBook12.setOnClickListener {
 
-                    toBookScreen()
+            toBookScreen()
 
-                }
+        }
+
+        bridgeHomeBook13.setOnClickListener {
+
+            toBookScreen()
+
+        }
 
 
-                bridgeHomeIcon.setOnClickListener {
+        bridgeHomeIcon.setOnClickListener {
 
-                    toHomeScreen()
-                    finish()
+            toHomeScreen()
+            finish()
 
-                }
-
+        }
 
 
     }
@@ -152,6 +159,13 @@ class HomeActivity : AppCompatActivity() {
         val intentBook = Intent(this, BookActivity::class.java)
         intent.putExtra("to", "fromHome")
         startActivity(intentBook)
+
+    }
+
+    private fun toProfileScreen() {
+
+        val intentProfile = Intent(this, ProfileActivity::class.java)
+        startActivity(intentProfile)
 
     }
 }

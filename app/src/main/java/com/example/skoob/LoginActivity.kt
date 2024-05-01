@@ -83,9 +83,6 @@ class LoginActivity : AppCompatActivity() {
 
                 if(task.isSuccessful) {
 
-                    val currentUser = Firebase.auth.currentUser
-
-                    intent.putExtra("current user", currentUser)
                     toHomeScreen()
 
                 } else {

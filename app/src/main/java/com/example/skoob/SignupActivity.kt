@@ -62,12 +62,7 @@ class SignupActivity : AppCompatActivity() {
             if (bridgeSignupPolitics.isChecked) {
 
                 getAccountDataSignUp()
-
-                if(isEverythingValid()) {
-
                     createAccount()
-
-                }
 
             } else {
 
