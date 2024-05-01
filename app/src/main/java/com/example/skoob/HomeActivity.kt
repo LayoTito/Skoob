@@ -150,6 +150,8 @@ class HomeActivity : AppCompatActivity() {
     private fun toBookScreen() {
 
         val intentBook = Intent(this, BookActivity::class.java)
+        intent.putExtra("to", "fromHome")
         startActivity(intentBook)
+
     }
 }
