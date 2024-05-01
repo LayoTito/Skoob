@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#00FFFFFF"
+    android:backgroundTint="#00FFFFFF"
     android:fillViewport="true"
     tools:layout_editor_absoluteX="1dp"
     tools:layout_editor_absoluteY="245dp">
@@ -171,12 +172,14 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="VisualLintButtonSize" />
 
-        <ImageView
-            android:id="@+id/profileImageIcon"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+        <ImageButton
+            android:id="@+id/profileBuutonIcon"
+            android:layout_width="61dp"
+            android:layout_height="51dp"
             android:layout_marginTop="24dp"
+            android:backgroundTint="#00FFFFFF"
             android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="@+id/profileImageSquare"
             app:layout_constraintHorizontal_bias="0.434"
             app:layout_constraintStart_toStartOf="@+id/profileImageSquare"
@@ -262,14 +265,17 @@
             app:layout_constraintVertical_bias="0.801"
             tools:ignore="TextSizeCheck" />
 
-        <TextView
-            android:id="@+id/profileTextUsernameReview"
-            android:layout_width="142dp"
-            android:layout_height="25dp"
+        <Button
+            android:id="@+id/profileButtonUsernameReview"
+            android:layout_width="145dp"
+            android:layout_height="38dp"
             android:layout_marginTop="24dp"
+            android:backgroundTint="#00FFFFFF"
             android:text="@string/username_example"
+            android:textAlignment="textStart"
             android:textColor="#FFFFFF"
             android:textColorLink="#EDEDED"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="@+id/profileImageSquare"
             app:layout_constraintHorizontal_bias="0.837"
             app:layout_constraintStart_toStartOf="@+id/profileImageSquare"
@@ -290,6 +296,20 @@
             app:layout_constraintVertical_bias="0.487"
             tools:ignore="ImageContrastCheck"
             tools:srcCompat="@drawable/bookcover1" />
+
+        <ImageButton
+            android:id="@+id/profileButtonReturn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="#00FFFFFF"
+            android:scaleType="centerInside"
+            android:tint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/profileImageBackground"
+            app:srcCompat="@drawable/arrow_left" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
