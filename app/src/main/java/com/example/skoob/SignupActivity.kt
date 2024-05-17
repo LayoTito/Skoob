@@ -62,7 +62,12 @@ class SignupActivity : AppCompatActivity() {
             if (bridgeSignupPolitics.isChecked) {
 
                 getAccountDataSignUp()
+
+                if(isEverythingValid()) {
+
                     createAccount()
+
+                }
 
             } else {
 
@@ -151,7 +156,7 @@ class SignupActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
 
                     writeUserData()
-                    toLoginScreen()
+                    toHomeScreen()
 
                 } else {
 
@@ -202,4 +207,11 @@ class SignupActivity : AppCompatActivity() {
         startActivity(intentWelcome)
 
     }
+
+    private fun toHomeScreen() {
+
+        val intentHome = Intent(this, LoginActivity::class.java)
+        startActivity(intentHome)
+    }
+
 }

@@ -37,6 +37,11 @@ class LoginActivity : AppCompatActivity() {
             insets
         }
 
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            toHomeScreen()
+        }
+
         bridgeLoginUsername = findViewById(R.id.loginTextUsername)
         bridgeLoginPassword = findViewById(R.id.loginTextPassword)
         bridgeLoginTextSignup = findViewById(R.id.loginTextSignup)
