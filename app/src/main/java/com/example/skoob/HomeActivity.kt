@@ -3,6 +3,7 @@ package com.example.skoob
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -10,21 +11,21 @@ import androidx.core.view.WindowInsetsCompat
 
 class HomeActivity : AppCompatActivity() {
 
-    private lateinit var bridgeHomeProfileIcon: ImageButton
-    private lateinit var bridgeHomeBook1: ImageButton
-    private lateinit var bridgeHomeBook2: ImageButton
-    private lateinit var bridgeHomeBook3: ImageButton
-    private lateinit var bridgeHomeBook4: ImageButton
-    private lateinit var bridgeHomeBook5: ImageButton
-    private lateinit var bridgeHomeBook6: ImageButton
-    private lateinit var bridgeHomeBook7: ImageButton
-    private lateinit var bridgeHomeBook8: ImageButton
-    private lateinit var bridgeHomeBook9: ImageButton
-    private lateinit var bridgeHomeBook10: ImageButton
-    private lateinit var bridgeHomeBook11: ImageButton
-    private lateinit var bridgeHomeBook12: ImageButton
-    private lateinit var bridgeHomeBook13: ImageButton
-    private lateinit var bridgeHomeIcon: ImageButton
+    private lateinit var bridgeHomeProfileIcon: ImageView
+    private lateinit var bridgeHomeBook1: ImageView
+    private lateinit var bridgeHomeBook2: ImageView
+    private lateinit var bridgeHomeBook3: ImageView
+    private lateinit var bridgeHomeBook4: ImageView
+    private lateinit var bridgeHomeBook5: ImageView
+    private lateinit var bridgeHomeBook6: ImageView
+    private lateinit var bridgeHomeBook7: ImageView
+    private lateinit var bridgeHomeBook8: ImageView
+    private lateinit var bridgeHomeBook9: ImageView
+    private lateinit var bridgeHomeBook10: ImageView
+    private lateinit var bridgeHomeBook11: ImageView
+    private lateinit var bridgeHomeBook12: ImageView
+    private lateinit var bridgeHomeBook13: ImageView
+    private lateinit var bridgeHomeIcon: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -156,9 +157,10 @@ class HomeActivity : AppCompatActivity() {
 
     private fun toBookScreen() {
 
-        val intentBook = Intent(this, BookActivity::class.java)
+        val intent = Intent(this, BookActivity::class.java)
+
         intent.putExtra("to", "fromHome")
-        startActivity(intentBook)
+        startActivity(intent)
 
     }
 

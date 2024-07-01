@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,6 +17,7 @@ class BookActivity : AppCompatActivity() {
     private lateinit var bridgeBookAdd: ImageButton
     private lateinit var bridgeBookReviewIcon: ImageView
     private lateinit var bridgeBookReviewUsername: TextView
+    private lateinit var bridgeBookButtonReturn: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +32,7 @@ class BookActivity : AppCompatActivity() {
         bridgeBookAdd = findViewById(R.id.bookButtonAdd)
         bridgeBookReviewIcon = findViewById(R.id.bookImageIcon)
         bridgeBookReviewUsername = findViewById(R.id.bookTextUsernameReview)
+        bridgeBookButtonReturn = findViewById(R.id.bookButtonReturn)
 
         bridgeBookAdd.setOnClickListener {
 
@@ -49,7 +52,11 @@ class BookActivity : AppCompatActivity() {
 
         }
 
+        bridgeBookButtonReturn.setOnClickListener{
 
+            toAnotherScreen()
+
+        }
 
 
     }
@@ -67,15 +74,14 @@ class BookActivity : AppCompatActivity() {
         startActivity(intentReview)
     }
 
-    val path = intent.getStringExtra("to")
+    private fun toAnotherScreen() {
 
-    private fun ToAnotherScreen() {
+        val data: Bundle? = intent.extras
+        val path = data?.getString("to")
 
         if (path == "fromHome") {
 
-            val intentHome = Intent(this, HomeActivity::class.java)
-            startActivity(intentHome)
-
+            toHomeScreen()
         }
 
         if (path == "fromProfile") {
@@ -84,6 +90,11 @@ class BookActivity : AppCompatActivity() {
             startActivity(intentProfile)
         }
 
+    }
 
+    private fun toHomeScreen() {
+
+        val intentHome = Intent(this, HomeActivity::class.java)
+        startActivity(intentHome)
     }
 }

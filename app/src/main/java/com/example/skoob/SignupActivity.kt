@@ -63,11 +63,11 @@ class SignupActivity : AppCompatActivity() {
 
                 getAccountDataSignUp()
 
-                if(isValidUsername() && isValidPassword()) {
+                //if(isValidUsername() && isValidPassword()) {
 
                     createAccount()
 
-                }
+                //}
 
             } else {
 
@@ -149,7 +149,6 @@ class SignupActivity : AppCompatActivity() {
                 "password" to inputSignupPassword,
                 "icon" to null,
                 "wallpaper" to null,
-                "bioPhrase" to null,
             )
 
             db.collection("users")
@@ -179,7 +178,7 @@ class SignupActivity : AppCompatActivity() {
 
     private fun toHomeScreen() {
 
-        val intentHome = Intent(this, LoginActivity::class.java)
+        val intentHome = Intent(this, HomeActivity::class.java)
         startActivity(intentHome)
     }
 

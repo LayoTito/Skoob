@@ -37,18 +37,18 @@ class LoginActivity : AppCompatActivity() {
             insets
         }
 
+        auth = Firebase.auth
+
         val currentUser = auth.currentUser
-        if (currentUser != null) {
+        /*if (currentUser != null) {
             toHomeScreen()
-        }
+        }*/
 
         bridgeLoginUsername = findViewById(R.id.loginTextUsername)
         bridgeLoginPassword = findViewById(R.id.loginTextPassword)
         bridgeLoginTextSignup = findViewById(R.id.loginTextSignup)
         bridgeLoginLogin = findViewById(R.id.loginButtonLogin)
         bridgeLoginCancel = findViewById(R.id.loginButtonCancel)
-
-        auth = Firebase.auth
 
         bridgeLoginLogin.setOnClickListener {
 
@@ -76,8 +76,8 @@ class LoginActivity : AppCompatActivity() {
 
     private fun getAccountDataLogIn() {
 
-        inputLoginEmail = bridgeLoginUsername.toString()
-        inputLoginPassword = bridgeLoginPassword.toString()
+        inputLoginEmail = bridgeLoginUsername.text.toString()
+        inputLoginPassword = bridgeLoginPassword.text.toString()
 
     }
 
@@ -100,7 +100,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun toHomeScreen() {
 
-        val intentHome = Intent(this, LoginActivity::class.java)
+        val intentHome = Intent(this, HomeActivity::class.java)
         startActivity(intentHome)
     }
 
