@@ -63,7 +63,7 @@ class SignupActivity : AppCompatActivity() {
 
                 getAccountDataSignUp()
 
-                if(isEverythingValid()) {
+                if(isValidUsername() && isValidPassword()) {
 
                     createAccount()
 
@@ -104,38 +104,6 @@ class SignupActivity : AppCompatActivity() {
         val regex = Regex("[a-zA-Z0-9!@#\$%^&*(),.?\":{}|<>\\s]")
 
         return inputSignupPassword.length >= 5 && regex.containsMatchIn(inputSignupPassword)
-
-    }
-
-    private fun isEverythingValid(): Boolean {
-
-        var i = 0
-
-        if (isValidPassword()) {
-
-            i++
-
-        } else {
-
-            Toast.makeText(
-                this,
-                "The password need to have ate least 5 characters, with a letter, number and a special character",
-                Toast.LENGTH_SHORT
-            ).show()
-
-        }
-
-        if (!isValidUsername()) {
-
-            i++
-
-        } else {
-
-            Toast.makeText(this, "Error invalid username", Toast.LENGTH_SHORT).show()
-
-        }
-
-        return i == 2
 
     }
 
@@ -181,6 +149,7 @@ class SignupActivity : AppCompatActivity() {
                 "password" to inputSignupPassword,
                 "icon" to null,
                 "wallpaper" to null,
+                "bioPhrase" to null,
             )
 
             db.collection("users")
