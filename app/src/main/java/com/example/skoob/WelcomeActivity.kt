@@ -20,10 +20,7 @@ class WelcomeActivity : AppCompatActivity() {
     private lateinit var bridgeWelcomeLogin: Button
 
     private lateinit var auth: FirebaseAuth
-
-
-    private val sharedPreferences = getSharedPreferences("preferences", Context.MODE_PRIVATE)
-    private val editor = sharedPreferences.edit()
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +36,7 @@ class WelcomeActivity : AppCompatActivity() {
         bridgeWelcomeLogin = findViewById(R.id.welcomeButtonLogIn)
 
         auth = Firebase.auth
+        sharedPreferences = getSharedPreferences("preferences", Context.MODE_PRIVATE)
 
         val userToken = sharedPreferences.getString("userToken", null)
 

@@ -1,6 +1,8 @@
 package com.example.skoob
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
@@ -39,6 +41,7 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var bridgeProfileStar5: ImageView
 
     private lateinit var auth: FirebaseAuth
+    private lateinit var sharedPreferences: SharedPreferences
     private val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,6 +70,7 @@ class ProfileActivity : AppCompatActivity() {
         bridgeProfileStar5 = findViewById(R.id.profileImageStar_5)
 
         auth = Firebase.auth
+        sharedPreferences = getSharedPreferences("preferences", Context.MODE_PRIVATE)
 
         fetchUsernameForCurrentUser()
 
@@ -121,11 +125,9 @@ class ProfileActivity : AppCompatActivity() {
         val currentUser = Firebase.auth.currentUser?.uid
 
         if (currentUser != null) {
-            db.collection("users").document(currentUser).get().addOnSuccessListener { document->
 
-                bridgeProfileUsername.text = document.getString("username")
+                bridgeProfileUsername.text = sharedPreferences.getString("username", null)
 
-            }
         }
 
 

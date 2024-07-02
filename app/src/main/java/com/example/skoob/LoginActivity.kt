@@ -2,6 +2,7 @@ package com.example.skoob
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -13,6 +14,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
@@ -23,13 +25,16 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var bridgeLoginLogin: Button
     private lateinit var bridgeLoginCancel: Button
 
+    private val db = Firebase.firestore
+
     private lateinit var auth: FirebaseAuth
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var editor: SharedPreferences.Editor
 
     private var inputLoginEmail: String = ""
     private var inputLoginPassword: String = ""
 
-    private val sharedPreferences = getSharedPreferences("preferences", Context.MODE_PRIVATE)
-    private val editor = sharedPreferences.edit()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +47,8 @@ class LoginActivity : AppCompatActivity() {
         }
 
         auth = Firebase.auth
+        sharedPreferences = getSharedPreferences("preferences", Context.MODE_PRIVATE)
+        editor = sharedPreferences.edit()
 
         bridgeLoginUsername = findViewById(R.id.loginTextUsername)
         bridgeLoginPassword = findViewById(R.id.loginTextPassword)
@@ -88,6 +95,7 @@ class LoginActivity : AppCompatActivity() {
                 if(task.isSuccessful) {
 
                     writeCookieToken()
+                    //writeCookieUsername()
 
                     toHomeScreen()
 
@@ -112,6 +120,17 @@ class LoginActivity : AppCompatActivity() {
                 editor.apply()
 
             }
+        }
+    }
+
+    private fun writeCookieUsername() {
+
+        val userId = auth.currentUser?.uid
+        db.collection("users").document(userId.toString()).get().addOnSuccessListener { document ->
+            val name = document.getString("username")
+
+            editor.putString("username", name)
+            editor.apply()
         }
     }
 

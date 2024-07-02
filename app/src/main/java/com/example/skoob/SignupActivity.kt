@@ -3,6 +3,7 @@ package com.example.skoob
 import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -31,14 +32,14 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var bridgeSignupCancel: Button
 
     private lateinit var auth: FirebaseAuth
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var editor: SharedPreferences.Editor
+
     private val db = Firebase.firestore
 
     private var inputSignupEmail: String = ""
     private var inputSignupUsername: String = ""
     private var inputSignupPassword: String = ""
-
-    private val sharedPreferences = getSharedPreferences("preferences", Context.MODE_PRIVATE)
-    private val editor = sharedPreferences.edit()
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -52,6 +53,8 @@ class SignupActivity : AppCompatActivity() {
         }
 
         auth = Firebase.auth
+        sharedPreferences = getSharedPreferences("preferences", Context.MODE_PRIVATE)
+        editor = sharedPreferences.edit()
 
         bridgeSignupEmail = findViewById(R.id.signupTextEmail)
         bridgeSignupUsername = findViewById(R.id.signupTextUsername)
@@ -117,7 +120,6 @@ class SignupActivity : AppCompatActivity() {
         inputSignupUsername = bridgeSignupUsername.text.toString()
         inputSignupPassword = bridgeSignupPassword.text.toString()
 
-
     }
 
     private fun createAccount() {
@@ -161,6 +163,7 @@ class SignupActivity : AppCompatActivity() {
                     Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
 
                     writeCookieToken()
+                    writeCookieUsername()
 
                 }
                 .addOnFailureListener { e ->
@@ -184,6 +187,11 @@ class SignupActivity : AppCompatActivity() {
 
             }
         }
+    }
+
+    private fun writeCookieUsername() {
+        editor.putString("username", inputSignupUsername)
+        editor.apply()
     }
 
     private fun toLoginScreen() {
