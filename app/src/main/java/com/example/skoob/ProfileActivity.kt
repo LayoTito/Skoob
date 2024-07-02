@@ -38,6 +38,7 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var bridgeProfileStar4: ImageView
     private lateinit var bridgeProfileStar5: ImageView
 
+    private lateinit var auth: FirebaseAuth
     private val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,19 +66,9 @@ class ProfileActivity : AppCompatActivity() {
         bridgeProfileStar4 = findViewById(R.id.profileImageStar_4)
         bridgeProfileStar5 = findViewById(R.id.profileImageStar_5)
 
-        fetchUsernameForCurrentUser(OnCompleteListener { task ->
-            if (task.isSuccessful) {
-                val documentSnapshot = task.result
-                if (documentSnapshot != null && documentSnapshot.exists()) {
-                    val username = documentSnapshot.getString("username")
-                    if (username != null) {
-                        println("Username: $username")
+        auth = Firebase.auth
 
-                        bridgeProfileUsername.text = username
-                    }
-                }
-            }
-        })
+        fetchUsernameForCurrentUser()
 
         bridgeProfileFavorite1.setOnClickListener {
 
@@ -125,16 +116,20 @@ class ProfileActivity : AppCompatActivity() {
 
 }
 
-    private fun fetchUsernameForCurrentUser(onCompleteListener: OnCompleteListener<DocumentSnapshot>) {
-        val currentUser = FirebaseAuth.getInstance().currentUser
-        val currentUserId: String? = currentUser?.uid
+    private fun fetchUsernameForCurrentUser() {
 
-        val documentRef = db.collection("users").document(currentUserId.toString())
+        val currentUser = Firebase.auth.currentUser?.uid
 
-        documentRef.get()
-            .addOnCompleteListener(onCompleteListener)
+        if (currentUser != null) {
+            db.collection("users").document(currentUser).get().addOnSuccessListener { document->
+
+                bridgeProfileUsername.text = document.getString("username")
+
+            }
+        }
+
+
     }
-
 
     private fun toHomeScreen() {
 
@@ -145,9 +140,13 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun toBookScreen() {
 
-        val intentBook = Intent(this, BookActivity::class.java)
-        startActivity(intentBook)
+        val intent = Intent(this, BookActivity::class.java)
+
+        intent.putExtra("to", "fromProfile")
+        startActivity(intent)
+
     }
+
     private fun toProfileScreen() {
 
         val intentProfile = Intent(this, ProfileActivity::class.java)

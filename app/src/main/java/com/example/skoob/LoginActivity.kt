@@ -1,5 +1,6 @@
 package com.example.skoob
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -27,6 +28,9 @@ class LoginActivity : AppCompatActivity() {
     private var inputLoginEmail: String = ""
     private var inputLoginPassword: String = ""
 
+    private val sharedPreferences = getSharedPreferences("preferences", Context.MODE_PRIVATE)
+    private val editor = sharedPreferences.edit()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -38,11 +42,6 @@ class LoginActivity : AppCompatActivity() {
         }
 
         auth = Firebase.auth
-
-        val currentUser = auth.currentUser
-        /*if (currentUser != null) {
-            toHomeScreen()
-        }*/
 
         bridgeLoginUsername = findViewById(R.id.loginTextUsername)
         bridgeLoginPassword = findViewById(R.id.loginTextPassword)
@@ -88,6 +87,8 @@ class LoginActivity : AppCompatActivity() {
 
                 if(task.isSuccessful) {
 
+                    writeCookieToken()
+
                     toHomeScreen()
 
                 } else {
@@ -96,6 +97,22 @@ class LoginActivity : AppCompatActivity() {
 
                 }
             }
+    }
+
+    private fun writeCookieToken() {
+
+        val firebaseUser = FirebaseAuth.getInstance().currentUser
+        firebaseUser?.getIdToken(true)?.addOnCompleteListener { task ->
+
+            if (task.isSuccessful) {
+
+                val idToken = task.result?.token
+
+                editor.putString("userToken", idToken)
+                editor.apply()
+
+            }
+        }
     }
 
     private fun toHomeScreen() {

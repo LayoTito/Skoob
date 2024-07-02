@@ -1,6 +1,7 @@
 package com.example.skoob
 
 import android.content.ContentValues.TAG
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -35,6 +36,9 @@ class SignupActivity : AppCompatActivity() {
     private var inputSignupEmail: String = ""
     private var inputSignupUsername: String = ""
     private var inputSignupPassword: String = ""
+
+    private val sharedPreferences = getSharedPreferences("preferences", Context.MODE_PRIVATE)
+    private val editor = sharedPreferences.edit()
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -155,12 +159,31 @@ class SignupActivity : AppCompatActivity() {
                 .add(user)
                 .addOnSuccessListener { documentReference ->
                     Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+
+                    writeCookieToken()
+
                 }
                 .addOnFailureListener { e ->
                     Log.w(TAG, "Error adding document", e)
                 }
         }
 
+    }
+
+    private fun writeCookieToken() {
+
+        val firebaseUser = FirebaseAuth.getInstance().currentUser
+        firebaseUser?.getIdToken(true)?.addOnCompleteListener { task ->
+
+            if (task.isSuccessful) {
+
+                val idToken = task.result?.token
+
+                editor.putString("userToken", idToken)
+                editor.apply()
+
+            }
+        }
     }
 
     private fun toLoginScreen() {

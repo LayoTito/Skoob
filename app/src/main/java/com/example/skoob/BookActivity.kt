@@ -61,13 +61,6 @@ class BookActivity : AppCompatActivity() {
 
     }
 
-    private fun toProfileScreen() {
-
-        val intentProfile = Intent(this, ProfileActivity::class.java)
-        startActivity(intentProfile)
-
-    }
-
     private fun toReviewScreen() {
 
         val intentReview = Intent(this, ReviewActivity::class.java)
@@ -86,8 +79,8 @@ class BookActivity : AppCompatActivity() {
 
         if (path == "fromProfile") {
 
-            val intentProfile = Intent(this, ProfileActivity::class.java)
-            startActivity(intentProfile)
+            toProfileScreen()
+
         }
 
     }
@@ -97,4 +90,12 @@ class BookActivity : AppCompatActivity() {
         val intentHome = Intent(this, HomeActivity::class.java)
         startActivity(intentHome)
     }
+
+    private fun toProfileScreen() {
+
+        val intentProfile = Intent(this, ProfileActivity::class.java)
+        startActivity(intentProfile)
+
+    }
+
 }
